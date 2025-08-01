@@ -1,0 +1,1254 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutFinlab.cshtml";
+}
+<div class="content-body default-height ">
+	<!-- row -->
+	<div class="container-fluid">
+		<div class="page-titles">
+			<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Coin Details</li>
+				</ol>
+			</nav>
+			<div>
+				<ul class="nav nav-pills light pt-2 pt-sm-0" role="tablist">
+					<li class="nav-item">
+						<a class="nav-link active" data-bs-toggle="tab" href="#Bitcoin" role="tab" aria-selected="false">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M16 9.50011C15.9993 8.67201 15.328 8.00092 14.5001 8H10V11H14.5001C15.328 10.9993 15.9993 10.328 16 9.50011Z" fill="#FFAB2D" />
+								<path d="M10 16H14.5001C15.3285 16 16 15.3285 16 14.5001C16 13.6715 15.3285 13 14.5001 13H10V16Z" fill="#FFAB2D" />
+								<path d="M12 0C5.3726 0 0 5.3726 0 12C0 18.6274 5.3726 24 12 24C18.6274 24 24 18.6274 24 12C23.9924 5.37574 18.6243 0.00758581 12 0ZM18.0001 14.5713C17.9978 16.4641 16.4641 17.9978 14.5716 17.9999V18.8571C14.5716 19.3305 14.1876 19.7143 13.7144 19.7143C13.2409 19.7143 12.8572 19.3305 12.8572 18.8571V17.9999H11.1431V18.8571C11.1431 19.3305 10.7591 19.7143 10.2859 19.7143C9.8124 19.7143 9.42866 19.3305 9.42866 18.8571V17.9999H6.85733C6.38387 17.9999 6.00013 17.6161 6.00013 17.1429C6.00013 16.6695 6.38387 16.2857 6.85733 16.2857H7.71427V7.71427H6.85733C6.38387 7.71427 6.00013 7.33053 6.00013 6.85707C6.00013 6.38361 6.38387 5.99987 6.85733 5.99987H9.42866V5.14293C9.42866 4.66947 9.8124 4.28573 10.2859 4.28573C10.7593 4.28573 11.1431 4.66947 11.1431 5.14293V5.99987H12.8572V5.14293C12.8572 4.66947 13.2409 4.28573 13.7144 4.28573C14.1879 4.28573 14.5716 4.66947 14.5716 5.14293V5.99987C16.4571 5.99202 17.992 7.5139 18.0001 9.39937C18.0043 10.3978 17.5714 11.3481 16.8152 12C17.5643 12.6445 17.9967 13.5828 18.0001 14.5713Z" fill="#FFAB2D" />
+							</svg>
+							Bitcoin
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-bs-toggle="tab" href="#Ethereum" role="tab" aria-selected="false">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M12.3801 13.8734C12.136 13.9546 11.864 13.9546 11.6199 13.8734L9 13L12 18L15 13L12.3801 13.8734Z" fill="#00ADA3" />
+								<path d="M12 12L15 10.8001L12 6L9 10.8001L12 12Z" fill="#00ADA3" />
+								<path d="M12 0C5.3726 0 0 5.3726 0 12C0 18.6274 5.3726 24 12 24C18.6274 24 24 18.6274 24 12C23.9927 5.37574 18.6243 0.00732425 12 0ZM17.0524 11.5263L12.7667 20.0977C12.5551 20.5212 12.04 20.6928 11.6168 20.4812C11.4507 20.3983 11.3162 20.2638 11.2333 20.0977L6.94757 11.5263C6.81443 11.2589 6.8296 10.9416 6.9876 10.6882L11.2733 3.83111C11.5582 3.42984 12.114 3.33515 12.5153 3.62001C12.5972 3.67808 12.6686 3.74923 12.7267 3.83111L17.0121 10.6882C17.1704 10.9416 17.1856 11.2589 17.0524 11.5263Z" fill="#627EEA" />
+							</svg>
+							Ethereum
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-bs-toggle="tab" href="#Monero" role="tab" aria-selected="true">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M12.2161 0.00189099C5.59822 -0.114662 0.118718 5.17136 0.00213245 11.7875C-0.0369579 13.869 0.462987 15.8373 1.36961 17.5623H5.14217V5.75207C5.14217 5.03013 6.12354 4.80045 6.44244 5.44835L12.0001 16.6998L17.5578 5.44903C17.8767 4.80045 18.8581 5.03013 18.8581 5.75207V17.5623H22.619C23.4625 15.9594 23.9645 14.1494 23.9981 12.2194C24.1147 5.60329 18.8341 0.1253 12.2161 0.00189099Z" fill="#FF782C" />
+								<path d="M17.4865 18.2479V8.6892L12.6146 18.5516C12.3842 19.0199 11.6154 19.0199 11.385 18.5516L6.51376 8.6892V18.2479C6.51376 18.6264 6.20721 18.9335 5.82796 18.9335H2.22685C4.36036 21.9303 7.82911 23.9241 11.7841 23.9981C15.8968 24.0708 19.5672 22.0551 21.7871 18.9335H18.1723C17.793 18.9335 17.4865 18.6264 17.4865 18.2479Z" fill="#FF782C" />
+							</svg>
+							Monero
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " data-bs-toggle="tab" href="#Litecoin" role="tab" aria-selected="true">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M12 0C5.3726 0 0 5.3726 0 12C0 18.6274 5.3726 24 12 24C18.6274 24 24 18.6274 24 12C23.9924 5.37574 18.6243 0.00758581 12 0V0ZM16.2857 18.0001H9.42866C8.9552 18.0001 8.57147 17.6164 8.57147 17.1429C8.57147 17.1024 8.57434 17.0618 8.5801 17.0216L9.22515 12.5054L7.92222 12.8313C7.85421 12.8486 7.78437 12.8572 7.71427 12.8572C7.24081 12.8567 6.85759 12.4727 6.85785 11.9992C6.85838 11.6063 7.12571 11.2642 7.50683 11.1684L9.48674 10.6735L10.2942 5.0213C10.3612 4.55254 10.7954 4.22714 11.2642 4.2941C11.7329 4.36107 12.0583 4.79529 11.9914 5.26404L11.2825 10.2247L14.3636 9.4543C14.8222 9.33737 15.2886 9.61439 15.4053 10.0729C15.5222 10.5315 15.2452 10.9979 14.7866 11.1148C14.784 11.1153 14.7814 11.1161 14.7788 11.1166L11.0204 12.0562L10.4164 16.2857H16.2857C16.7592 16.2857 17.1429 16.6695 17.1429 17.1429C17.1429 17.6161 16.7592 18.0001 16.2857 18.0001Z" fill="#374C98" />
+							</svg>
+							Litecoin
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="tab-content">
+			<div class="tab-pane fade show active" id="Bitcoin">
+				<div class="row">
+					<div class="col-xl-3 col-xxl-4 mt-4">
+						<div class="card">
+							<div class="card-header pb-0 border-0">
+								<h4 class="card-title">About</h4>
+								<div class="dropdown custom-dropdown mb-0">
+									<div class="btn sharp tp-btn dark-btn" data-bs-toggle="dropdown">
+										<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M12.0049 13C12.5572 13 13.0049 12.5523 13.0049 12C13.0049 11.4477 12.5572 11 12.0049 11C11.4526 11 11.0049 11.4477 11.0049 12C11.0049 12.5523 11.4526 13 12.0049 13Z" stroke="#342E59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+											<path d="M12.0049 6C12.5572 6 13.0049 5.55228 13.0049 5C13.0049 4.44772 12.5572 4 12.0049 4C11.4526 4 11.0049 4.44772 11.0049 5C11.0049 5.55228 11.4526 6 12.0049 6Z" stroke="#342E59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+											<path d="M12.0049 20C12.5572 20 13.0049 19.5523 13.0049 19C13.0049 18.4477 12.5572 18 12.0049 18C11.4526 18 11.0049 18.4477 11.0049 19C11.0049 19.5523 11.4526 20 12.0049 20Z" stroke="#342E59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</div>
+									<div class="dropdown-menu dropdown-menu-right">
+										<a class="dropdown-item" href="javascript:void(0);">Details</a>
+										<a class="dropdown-item text-danger" href="javascript:void(0);">Cancel</a>
+									</div>
+								</div>
+							</div>
+							<div class="card-body dlab-scroll height400">
+								<div class="d-flex align-items-start mb-3 about-coin">
+									<div>
+										<img src="~/Finlab/images/svg/btc1.svg" class="avatar" alt="">
+									</div>
+									<div class="ms-3">
+										<h4 class="mb-0">Digital Cash</h4>
+										<p class="mb-2">BTC</p>
+										<p class="mb-0">1 BTC = 68.48 USD</p>
+									</div>
+								</div>
+								<p>Dash is an open source cryptocurrency. It is an altcoin that was forked from the Bitcoin protocol. It is also a decentralized autonomous organization (DAO) run by a subset of its users, which are called "masternodes". The currency permits transactions that can be untraceable.</p>
+								<p>Dash is an open source cryptocurrency. It is an altcoin that was forked from the Bitcoin protocol. It is also a decentralized autonomous organization (DAO) run by a subset of its users, which are called "masternodes". The currency permits transactions that can be untraceable.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-9 col-xxl-8 mt-4">
+						<div class="card market_chart">
+							<div class="card-header border-0 align-items-start flex-wrap pb-0">
+								<div>
+									<h2 class="card-title mb-2">Coin Chart</h2>
+									<div class="market-data">
+										<div class="income data">
+											<p class="mb-0">This Month</p>
+											<h4>$29.999.00</h4>
+										</div>
+										<div class="price data">
+											<p class="mb-0">Price</p>
+											<h4>480 <sub>- 0,5%</sub></h4>
+										</div>
+										<div class="rate data">
+											<p class="mb-0">Rate</p>
+											<h4>-0.0662%/hr</h4>
+										</div>
+										<div class="volume data">
+											<p class="mb-0">volume</p>
+											<h4>175k</h4>
+										</div>
+
+									</div>
+								</div>
+								<div class="d-flex align-items-center">
+									<select class="image-select default-select dashboard-select me-4" aria-label="Default">
+										<option selected>This Month</option>
+										<option value="1">Weeks</option>
+										<option value="2">Today</option>
+									</select>
+									<div class="dropdown">
+										<a href="javascript:void(0);" class="btn-link btn sharp tp-btn btn-primary pill" data-bs-toggle="dropdown" aria-expanded="false">
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.33319 9.99985C8.33319 10.9203 9.07938 11.6665 9.99986 11.6665C10.9203 11.6665 11.6665 10.9203 11.6665 9.99986C11.6665 9.07938 10.9203 8.33319 9.99986 8.33319C9.07938 8.33319 8.33319 9.07938 8.33319 9.99985Z" fill="#ffffff" />
+												<path d="M8.33319 3.33329C8.33319 4.25376 9.07938 4.99995 9.99986 4.99995C10.9203 4.99995 11.6665 4.25376 11.6665 3.33329C11.6665 2.41282 10.9203 1.66663 9.99986 1.66663C9.07938 1.66663 8.33319 2.41282 8.33319 3.33329Z" fill="#ffffff" />
+												<path d="M8.33319 16.6667C8.33319 17.5871 9.07938 18.3333 9.99986 18.3333C10.9203 18.3333 11.6665 17.5871 11.6665 16.6667C11.6665 15.7462 10.9203 15 9.99986 15C9.07938 15 8.33319 15.7462 8.33319 16.6667Z" fill="#ffffff" />
+											</svg>
+
+										</a>
+										<div class="dropdown-menu dropdown-menu-end">
+											<a class="dropdown-item" href="javascript:void(0);">Delete</a>
+											<a class="dropdown-item" href="javascript:void(0);">Edit</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card-body custome-tooltip py-0 px-3">
+								<div id="activity1"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xl-3 col-xxl-6 col-md-6">
+						<div class="card">
+							<div class="card-header border-0 pb-0">
+								<h4 class="card-title">Sell Order</h4>
+								<div class="dropdown">
+									<a href="javascript:void(0);" class="btn-link btn sharp tp-btn btn-primary pill" data-bs-toggle="dropdown" aria-expanded="false">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8.33319 9.99985C8.33319 10.9203 9.07938 11.6665 9.99986 11.6665C10.9203 11.6665 11.6665 10.9203 11.6665 9.99986C11.6665 9.07938 10.9203 8.33319 9.99986 8.33319C9.07938 8.33319 8.33319 9.07938 8.33319 9.99985Z" fill="#ffffff"></path>
+											<path d="M8.33319 3.33329C8.33319 4.25376 9.07938 4.99995 9.99986 4.99995C10.9203 4.99995 11.6665 4.25376 11.6665 3.33329C11.6665 2.41282 10.9203 1.66663 9.99986 1.66663C9.07938 1.66663 8.33319 2.41282 8.33319 3.33329Z" fill="#ffffff"></path>
+											<path d="M8.33319 16.6667C8.33319 17.5871 9.07938 18.3333 9.99986 18.3333C10.9203 18.3333 11.6665 17.5871 11.6665 16.6667C11.6665 15.7462 10.9203 15 9.99986 15C9.07938 15 8.33319 15.7462 8.33319 16.6667Z" fill="#ffffff"></path>
+										</svg>
+
+									</a>
+									<div class="dropdown-menu dropdown-menu-end">
+										<a class="dropdown-item" href="javascript:void(0);">Delete</a>
+										<a class="dropdown-item" href="javascript:void(0);">Edit</a>
+									</div>
+								</div>
+							</div>
+							<div class="card-body p-3">
+								<div class="table-responsive">
+									<table class="table text-center bg-warning-hover tr-rounded order-tbl">
+										<thead>
+											<tr>
+												<th class="text-left">Price</th>
+												<th class="text-center">Amount</th>
+												<th class="text-right">Total</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="text-left">82.3</td>
+												<td>0.15</td>
+												<td class="text-right">$134,12</td>
+											</tr>
+											<tr>
+												<td class="text-left">83.9</td>
+												<td>0.18</td>
+												<td class="text-right">$237,31</td>
+											</tr>
+											<tr>
+												<td class="text-left">84.2</td>
+												<td>0.25</td>
+												<td class="text-right">$252,58</td>
+											</tr>
+											<tr>
+												<td class="text-left">86.2</td>
+												<td>0.35</td>
+												<td class="text-right">$126,26</td>
+											</tr>
+											<tr>
+												<td class="text-left">91.6</td>
+												<td>0.75</td>
+												<td class="text-right">$46,92</td>
+											</tr>
+											<tr>
+												<td class="text-left">92.6</td>
+												<td>0.21</td>
+												<td class="text-right">$123,27</td>
+											</tr>
+
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-xxl-6 col-md-6">
+						<div class="card">
+							<div class="card-header border-0 pb-0">
+								<h4 class="card-title">Buy Order</h4>
+								<div class="dropdown">
+									<a href="javascript:void(0);" class="btn-link btn sharp tp-btn btn-primary pill" data-bs-toggle="dropdown" aria-expanded="false">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8.33319 9.99985C8.33319 10.9203 9.07938 11.6665 9.99986 11.6665C10.9203 11.6665 11.6665 10.9203 11.6665 9.99986C11.6665 9.07938 10.9203 8.33319 9.99986 8.33319C9.07938 8.33319 8.33319 9.07938 8.33319 9.99985Z" fill="#ffffff"></path>
+											<path d="M8.33319 3.33329C8.33319 4.25376 9.07938 4.99995 9.99986 4.99995C10.9203 4.99995 11.6665 4.25376 11.6665 3.33329C11.6665 2.41282 10.9203 1.66663 9.99986 1.66663C9.07938 1.66663 8.33319 2.41282 8.33319 3.33329Z" fill="#ffffff"></path>
+											<path d="M8.33319 16.6667C8.33319 17.5871 9.07938 18.3333 9.99986 18.3333C10.9203 18.3333 11.6665 17.5871 11.6665 16.6667C11.6665 15.7462 10.9203 15 9.99986 15C9.07938 15 8.33319 15.7462 8.33319 16.6667Z" fill="#ffffff"></path>
+										</svg>
+
+									</a>
+									<div class="dropdown-menu dropdown-menu-end">
+										<a class="dropdown-item" href="javascript:void(0);">Delete</a>
+										<a class="dropdown-item" href="javascript:void(0);">Edit</a>
+									</div>
+								</div>
+							</div>
+							<div class="card-body pb-0 pt-3">
+								<div class="table-responsive">
+									<table class="table text-center bg-warning-hover tr-rounded order-tbl">
+										<thead>
+											<tr>
+												<th class="text-left">Price</th>
+												<th class="text-center">Amount</th>
+												<th class="text-right">Total</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="text-left">82.3</td>
+												<td>0.15</td>
+												<td class="text-right">$134,12</td>
+											</tr>
+											<tr>
+												<td class="text-left">83.9</td>
+												<td>0.18</td>
+												<td class="text-right">$237,31</td>
+											</tr>
+											<tr>
+												<td class="text-left">84.2</td>
+												<td>0.25</td>
+												<td class="text-right">$252,58</td>
+											</tr>
+											<tr>
+												<td class="text-left">86.2</td>
+												<td>0.35</td>
+												<td class="text-right">$126,26</td>
+											</tr>
+											<tr>
+												<td class="text-left">91.6</td>
+												<td>0.75</td>
+												<td class="text-right">$46,92</td>
+											</tr>
+											<tr>
+												<td class="text-left">92.6</td>
+												<td>0.21</td>
+												<td class="text-right">$123,27</td>
+											</tr>
+
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-6 col-xxl-12">
+						<div class="card">
+							<div class="card-header d-sm-flex d-block pb-0 border-0">
+								<div>
+									<h4 class="card-title">Quick Trade</h4>
+									<p class="mb-0">Lorem ipsum dolor sit amet, consectetur</p>
+								</div>
+								<select class="form-control custom-image-select image-select mt-3 mt-sm-0 w-auto">
+									<option data-thumbnail="../Finlab/images/svg/ltc.svg">Yearly (2023)</option>
+									<option data-thumbnail="../Finlab/images/svg/eth.svg">Weekly (2023)</option>
+									<option data-thumbnail="../Finlab/images/svg/btc.svg">Daily (2023)</option>
+								</select>
+							</div>
+							<div class="card-body">
+								<div class="basic-form">
+									<form class="form-wrapper">
+										<input type="hidden" name="_token" value="QyZgACk6bn1Ou8GRCgc1kF1HKsRPN7X6C6oCdQJt">									<div class="form-group">
+											<div class="input-group mb-3">
+												<span class="input-group-text" id="basic-addon2">Amount BTC</span>
+												<input type="text" class="form-control text-end" placeholder="52.5" aria-label="Username" aria-describedby="basic-addon2">
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="input-group mb-3">
+												<span class="input-group-text" id="basic-addon12">Price BPL</span>
+												<input type="text" class="form-control text-end" placeholder="52.5" aria-label="Username" aria-describedby="basic-addon12">
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="input-group mb-3">
+												<span class="input-group-text" id="basic-addon13">Fee (1%)</span>
+												<input type="number" class="form-control text-end" placeholder="52.5" aria-label="Username" aria-describedby="basic-addon13">
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="input-group mb-3">
+												<span class="input-group-text" id="basic-addon14">Fee (1%)</span>
+												<input type="number" class="form-control text-end" placeholder="52.5" aria-label="Username" aria-describedby="basic-addon14">
+											</div>
+										</div>
+										<div class="row mt-4 align-items-center">
+											<div class="col-lg-6">
+												<div>
+													<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
+												</div>
+											</div>
+											<div class="col-lg-6">
+												<div class="d-flex justify-content-end">
+													<a href="javascript:void(0);" class="btn btn-success">
+														BUY
+														<svg class="ms-2" width="16" height="12" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M16.9638 11.5104L16.9721 14.9391L3.78954 1.7565C3.22815 1.19511 2.31799 1.19511 1.75661 1.7565C1.19522 2.31789 1.19522 3.22805 1.75661 3.78943L14.9392 16.972L11.5105 16.9637L11.5105 16.9637C10.7166 16.9619 10.0715 17.6039 10.0696 18.3978C10.0677 19.1919 10.7099 19.8369 11.5036 19.8388L11.5049 19.3388L11.5036 19.8388L18.3976 19.8554L18.4146 19.8555L18.4159 19.8555C18.418 19.8555 18.42 19.8555 18.422 19.8555C19.2131 19.8533 19.8528 19.2114 19.8555 18.4231C19.8556 18.4196 19.8556 18.4158 19.8556 18.4117L19.8389 11.5035L19.8389 11.5035C19.8369 10.7097 19.1919 10.0676 18.3979 10.0695C17.604 10.0713 16.9619 10.7164 16.9638 11.5103L16.9638 11.5104Z" fill="white" stroke="white"></path>
+														</svg>
+													</a>
+													<a href="javascript:void(0);" class="btn btn-danger ms-3">
+														SELL
+														<svg class="ms-4" width="16" height="16" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M5.35182 13.4965L5.35182 13.4965L5.33512 6.58823C5.33508 6.5844 5.3351 6.58084 5.33514 6.57759M5.35182 13.4965L5.83514 6.58306L5.33514 6.58221C5.33517 6.56908 5.33572 6.55882 5.33597 6.5545L5.33606 6.55298C5.33585 6.55628 5.33533 6.56514 5.33516 6.57648C5.33515 6.57684 5.33514 6.57721 5.33514 6.57759M5.35182 13.4965C5.35375 14.2903 5.99878 14.9324 6.79278 14.9305C7.58669 14.9287 8.22874 14.2836 8.22686 13.4897L8.22686 13.4896L8.21853 10.0609M5.35182 13.4965L8.21853 10.0609M5.33514 6.57759C5.33752 5.789 5.97736 5.14667 6.76872 5.14454C6.77041 5.14452 6.77217 5.14451 6.77397 5.14451L6.77603 5.1445L6.79319 5.14456L13.687 5.16121L13.6858 5.66121L13.687 5.16121C14.4807 5.16314 15.123 5.80809 15.1211 6.6022C15.1192 7.3961 14.4741 8.03814 13.6802 8.03626L13.6802 8.03626L10.2515 8.02798L23.4341 21.2106C23.9955 21.772 23.9955 22.6821 23.4341 23.2435C22.8727 23.8049 21.9625 23.8049 21.4011 23.2435L8.21853 10.0609M5.33514 6.57759C5.33513 6.57959 5.33514 6.58159 5.33514 6.5836L8.21853 10.0609M6.77407 5.14454C6.77472 5.14454 6.77537 5.14454 6.77603 5.14454L6.77407 5.14454Z" fill="white" stroke="white"></path>
+														</svg>
+													</a>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tab-pane fade" id="Ethereum">
+				<div class="row">
+					<div class="col-xl-3 col-xxl-4 mt-4">
+						<div class="card">
+							<div class="card-header pb-0 border-0">
+								<h4 class="card-title">About</h4>
+								<div class="dropdown custom-dropdown mb-0">
+									<div class="btn sharp tp-btn dark-btn" data-bs-toggle="dropdown">
+										<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M12.0049 13C12.5572 13 13.0049 12.5523 13.0049 12C13.0049 11.4477 12.5572 11 12.0049 11C11.4526 11 11.0049 11.4477 11.0049 12C11.0049 12.5523 11.4526 13 12.0049 13Z" stroke="#342E59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+											<path d="M12.0049 6C12.5572 6 13.0049 5.55228 13.0049 5C13.0049 4.44772 12.5572 4 12.0049 4C11.4526 4 11.0049 4.44772 11.0049 5C11.0049 5.55228 11.4526 6 12.0049 6Z" stroke="#342E59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+											<path d="M12.0049 20C12.5572 20 13.0049 19.5523 13.0049 19C13.0049 18.4477 12.5572 18 12.0049 18C11.4526 18 11.0049 18.4477 11.0049 19C11.0049 19.5523 11.4526 20 12.0049 20Z" stroke="#342E59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</div>
+									<div class="dropdown-menu dropdown-menu-right">
+										<a class="dropdown-item" href="javascript:void(0);">Details</a>
+										<a class="dropdown-item text-danger" href="javascript:void(0);">Cancel</a>
+									</div>
+								</div>
+							</div>
+							<div class="card-body dlab-scroll height400">
+								<div class="d-flex align-items-start mb-3 about-coin">
+									<div>
+										<img src="~/Finlab/images/svg/eth2.svg" class="avatar" alt="">
+									</div>
+									<div class="ms-3">
+										<h4 class="mb-0">Digital Cash</h4>
+										<p class="mb-2">BTC</p>
+										<p class="mb-0">1 BTC = 68.48 USD</p>
+									</div>
+								</div>
+								<p>Dash is an open source cryptocurrency. It is an altcoin that was forked from the Bitcoin protocol. It is also a decentralized autonomous organization (DAO) run by a subset of its users, which are called "masternodes". The currency permits transactions that can be untraceable.</p>
+								<p>Dash is an open source cryptocurrency. It is an altcoin that was forked from the Bitcoin protocol. It is also a decentralized autonomous organization (DAO) run by a subset of its users, which are called "masternodes". The currency permits transactions that can be untraceable.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-9 col-xxl-8 mt-4">
+						<div class="card market_chart">
+							<div class="card-header border-0 align-items-start flex-wrap pb-0">
+								<div>
+									<h2 class="card-title">Coin Chart</h2>
+									<div class="market-data">
+										<div class="income data">
+											<p class="mb-0">This Month</p>
+											<h4>$29.999.00</h4>
+										</div>
+										<div class="price data">
+											<p class="mb-0">Price</p>
+											<h4>480 <sub>- 0,5%</sub></h4>
+										</div>
+										<div class="rate data">
+											<p class="mb-0">Rate</p>
+											<h4>-0.0662%/hr</h4>
+										</div>
+										<div class="volume data">
+											<p class="mb-0">volume</p>
+											<h4>175k</h4>
+										</div>
+
+									</div>
+								</div>
+								<div class="d-flex align-items-center">
+									<select class="image-select default-select dashboard-select me-4" aria-label="Default">
+										<option selected>This Month</option>
+										<option value="1">Weeks</option>
+										<option value="2">Today</option>
+									</select>
+									<div class="dropdown">
+										<a href="javascript:void(0);" class="btn-link btn sharp tp-btn btn-primary pill" data-bs-toggle="dropdown" aria-expanded="false">
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.33319 9.99985C8.33319 10.9203 9.07938 11.6665 9.99986 11.6665C10.9203 11.6665 11.6665 10.9203 11.6665 9.99986C11.6665 9.07938 10.9203 8.33319 9.99986 8.33319C9.07938 8.33319 8.33319 9.07938 8.33319 9.99985Z" fill="#ffffff" />
+												<path d="M8.33319 3.33329C8.33319 4.25376 9.07938 4.99995 9.99986 4.99995C10.9203 4.99995 11.6665 4.25376 11.6665 3.33329C11.6665 2.41282 10.9203 1.66663 9.99986 1.66663C9.07938 1.66663 8.33319 2.41282 8.33319 3.33329Z" fill="#ffffff" />
+												<path d="M8.33319 16.6667C8.33319 17.5871 9.07938 18.3333 9.99986 18.3333C10.9203 18.3333 11.6665 17.5871 11.6665 16.6667C11.6665 15.7462 10.9203 15 9.99986 15C9.07938 15 8.33319 15.7462 8.33319 16.6667Z" fill="#ffffff" />
+											</svg>
+
+										</a>
+										<div class="dropdown-menu dropdown-menu-end">
+											<a class="dropdown-item" href="javascript:void(0);">Delete</a>
+											<a class="dropdown-item" href="javascript:void(0);">Edit</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card-body custome-tooltip py-0 px-3">
+								<div id="activity2"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xl-3 col-xxl-6 col-md-6">
+						<div class="card">
+							<div class="card-header border-0 pb-0">
+								<h4 class="card-title">Sell Order</h4>
+								<div class="dropdown">
+									<a href="javascript:void(0);" class="btn-link btn sharp tp-btn btn-primary pill" data-bs-toggle="dropdown" aria-expanded="false">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8.33319 9.99985C8.33319 10.9203 9.07938 11.6665 9.99986 11.6665C10.9203 11.6665 11.6665 10.9203 11.6665 9.99986C11.6665 9.07938 10.9203 8.33319 9.99986 8.33319C9.07938 8.33319 8.33319 9.07938 8.33319 9.99985Z" fill="#ffffff"></path>
+											<path d="M8.33319 3.33329C8.33319 4.25376 9.07938 4.99995 9.99986 4.99995C10.9203 4.99995 11.6665 4.25376 11.6665 3.33329C11.6665 2.41282 10.9203 1.66663 9.99986 1.66663C9.07938 1.66663 8.33319 2.41282 8.33319 3.33329Z" fill="#ffffff"></path>
+											<path d="M8.33319 16.6667C8.33319 17.5871 9.07938 18.3333 9.99986 18.3333C10.9203 18.3333 11.6665 17.5871 11.6665 16.6667C11.6665 15.7462 10.9203 15 9.99986 15C9.07938 15 8.33319 15.7462 8.33319 16.6667Z" fill="#ffffff"></path>
+										</svg>
+
+									</a>
+									<div class="dropdown-menu dropdown-menu-end">
+										<a class="dropdown-item" href="javascript:void(0);">Delete</a>
+										<a class="dropdown-item" href="javascript:void(0);">Edit</a>
+									</div>
+								</div>
+							</div>
+							<div class="card-body p-3">
+								<div class="table-responsive">
+									<table class="table text-center bg-warning-hover tr-rounded order-tbl">
+										<thead>
+											<tr>
+												<th class="text-left">Price</th>
+												<th class="text-center">Amount</th>
+												<th class="text-right">Total</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="text-left">82.3</td>
+												<td>0.15</td>
+												<td class="text-right">$134,12</td>
+											</tr>
+											<tr>
+												<td class="text-left">83.9</td>
+												<td>0.18</td>
+												<td class="text-right">$237,31</td>
+											</tr>
+											<tr>
+												<td class="text-left">84.2</td>
+												<td>0.25</td>
+												<td class="text-right">$252,58</td>
+											</tr>
+											<tr>
+												<td class="text-left">86.2</td>
+												<td>0.35</td>
+												<td class="text-right">$126,26</td>
+											</tr>
+											<tr>
+												<td class="text-left">91.6</td>
+												<td>0.75</td>
+												<td class="text-right">$46,92</td>
+											</tr>
+											<tr>
+												<td class="text-left">92.6</td>
+												<td>0.21</td>
+												<td class="text-right">$123,27</td>
+											</tr>
+
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-xxl-6 col-md-6">
+						<div class="card">
+							<div class="card-header border-0 pb-0">
+								<h4 class="card-title">Buy Order</h4>
+								<div class="dropdown">
+									<a href="javascript:void(0);" class="btn-link btn sharp tp-btn btn-primary pill" data-bs-toggle="dropdown" aria-expanded="false">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8.33319 9.99985C8.33319 10.9203 9.07938 11.6665 9.99986 11.6665C10.9203 11.6665 11.6665 10.9203 11.6665 9.99986C11.6665 9.07938 10.9203 8.33319 9.99986 8.33319C9.07938 8.33319 8.33319 9.07938 8.33319 9.99985Z" fill="#ffffff"></path>
+											<path d="M8.33319 3.33329C8.33319 4.25376 9.07938 4.99995 9.99986 4.99995C10.9203 4.99995 11.6665 4.25376 11.6665 3.33329C11.6665 2.41282 10.9203 1.66663 9.99986 1.66663C9.07938 1.66663 8.33319 2.41282 8.33319 3.33329Z" fill="#ffffff"></path>
+											<path d="M8.33319 16.6667C8.33319 17.5871 9.07938 18.3333 9.99986 18.3333C10.9203 18.3333 11.6665 17.5871 11.6665 16.6667C11.6665 15.7462 10.9203 15 9.99986 15C9.07938 15 8.33319 15.7462 8.33319 16.6667Z" fill="#ffffff"></path>
+										</svg>
+
+									</a>
+									<div class="dropdown-menu dropdown-menu-end">
+										<a class="dropdown-item" href="javascript:void(0);">Delete</a>
+										<a class="dropdown-item" href="javascript:void(0);">Edit</a>
+									</div>
+								</div>
+							</div>
+							<div class="card-body pb-0 pt-3">
+								<div class="table-responsive">
+									<table class="table text-center bg-warning-hover tr-rounded order-tbl">
+										<thead>
+											<tr>
+												<th class="text-left">Price</th>
+												<th class="text-center">Amount</th>
+												<th class="text-right">Total</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="text-left">82.3</td>
+												<td>0.15</td>
+												<td class="text-right">$134,12</td>
+											</tr>
+											<tr>
+												<td class="text-left">83.9</td>
+												<td>0.18</td>
+												<td class="text-right">$237,31</td>
+											</tr>
+											<tr>
+												<td class="text-left">84.2</td>
+												<td>0.25</td>
+												<td class="text-right">$252,58</td>
+											</tr>
+											<tr>
+												<td class="text-left">86.2</td>
+												<td>0.35</td>
+												<td class="text-right">$126,26</td>
+											</tr>
+											<tr>
+												<td class="text-left">91.6</td>
+												<td>0.75</td>
+												<td class="text-right">$46,92</td>
+											</tr>
+											<tr>
+												<td class="text-left">92.6</td>
+												<td>0.21</td>
+												<td class="text-right">$123,27</td>
+											</tr>
+
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-6 col-xxl-12">
+						<div class="card">
+							<div class="card-header d-sm-flex d-block pb-0 border-0">
+								<div>
+									<h4 class="card-title">Quick Trade</h4>
+									<p class="mb-0">Lorem ipsum dolor sit amet, consectetur</p>
+								</div>
+								<select class="form-control custom-image-select image-select mt-3 mt-sm-0 w-auto">
+									<option data-thumbnail="../Finlab/images/svg/ltc.svg">Yearly (2023)</option>
+									<option data-thumbnail="../Finlab/images/svg/eth.svg">Weekly (2023)</option>
+									<option data-thumbnail="../Finlab/images/svg/btc.svg">Daily (2023)</option>
+								</select>
+							</div>
+							<div class="card-body">
+								<div class="basic-form">
+									<form class="form-wrapper">
+										<input type="hidden" name="_token" value="QyZgACk6bn1Ou8GRCgc1kF1HKsRPN7X6C6oCdQJt">									<div class="form-group">
+											<div class="input-group mb-3">
+												<span class="input-group-text" id="basic-addon100">Amount BTC</span>
+												<input type="text" class="form-control text-end" placeholder="52.5" aria-label="Username" aria-describedby="basic-addon100">
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="input-group mb-3">
+												<span class="input-group-text" id="basic-addon103">Price BPL</span>
+												<input type="text" class="form-control text-end" placeholder="52.5" aria-label="Username" aria-describedby="basic-addon103">
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="input-group mb-3">
+												<span class="input-group-text" id="basic-addon101">Fee (1%)</span>
+												<input type="number" class="form-control text-end" placeholder="52.5" aria-label="Username" aria-describedby="basic-addon101">
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="input-group mb-3">
+												<span class="input-group-text" id="basic-addon102">Fee (1%)</span>
+												<input type="number" class="form-control text-end" placeholder="52.5" aria-label="Username" aria-describedby="basic-addon102">
+											</div>
+										</div>
+										<div class="row mt-4 align-items-center">
+											<div class="col-lg-6">
+												<div>
+													<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
+												</div>
+											</div>
+											<div class="col-lg-6">
+												<div class="d-flex justify-content-end">
+													<a href="javascript:void(0);" class="btn btn-success">
+														BUY
+														<svg class="ms-2" width="16" height="12" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M16.9638 11.5104L16.9721 14.9391L3.78954 1.7565C3.22815 1.19511 2.31799 1.19511 1.75661 1.7565C1.19522 2.31789 1.19522 3.22805 1.75661 3.78943L14.9392 16.972L11.5105 16.9637L11.5105 16.9637C10.7166 16.9619 10.0715 17.6039 10.0696 18.3978C10.0677 19.1919 10.7099 19.8369 11.5036 19.8388L11.5049 19.3388L11.5036 19.8388L18.3976 19.8554L18.4146 19.8555L18.4159 19.8555C18.418 19.8555 18.42 19.8555 18.422 19.8555C19.2131 19.8533 19.8528 19.2114 19.8555 18.4231C19.8556 18.4196 19.8556 18.4158 19.8556 18.4117L19.8389 11.5035L19.8389 11.5035C19.8369 10.7097 19.1919 10.0676 18.3979 10.0695C17.604 10.0713 16.9619 10.7164 16.9638 11.5103L16.9638 11.5104Z" fill="white" stroke="white"></path>
+														</svg>
+													</a>
+													<a href="javascript:void(0);" class="btn btn-danger ms-3">
+														SELL
+														<svg class="ms-4" width="16" height="16" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M5.35182 13.4965L5.35182 13.4965L5.33512 6.58823C5.33508 6.5844 5.3351 6.58084 5.33514 6.57759M5.35182 13.4965L5.83514 6.58306L5.33514 6.58221C5.33517 6.56908 5.33572 6.55882 5.33597 6.5545L5.33606 6.55298C5.33585 6.55628 5.33533 6.56514 5.33516 6.57648C5.33515 6.57684 5.33514 6.57721 5.33514 6.57759M5.35182 13.4965C5.35375 14.2903 5.99878 14.9324 6.79278 14.9305C7.58669 14.9287 8.22874 14.2836 8.22686 13.4897L8.22686 13.4896L8.21853 10.0609M5.35182 13.4965L8.21853 10.0609M5.33514 6.57759C5.33752 5.789 5.97736 5.14667 6.76872 5.14454C6.77041 5.14452 6.77217 5.14451 6.77397 5.14451L6.77603 5.1445L6.79319 5.14456L13.687 5.16121L13.6858 5.66121L13.687 5.16121C14.4807 5.16314 15.123 5.80809 15.1211 6.6022C15.1192 7.3961 14.4741 8.03814 13.6802 8.03626L13.6802 8.03626L10.2515 8.02798L23.4341 21.2106C23.9955 21.772 23.9955 22.6821 23.4341 23.2435C22.8727 23.8049 21.9625 23.8049 21.4011 23.2435L8.21853 10.0609M5.33514 6.57759C5.33513 6.57959 5.33514 6.58159 5.33514 6.5836L8.21853 10.0609M6.77407 5.14454C6.77472 5.14454 6.77537 5.14454 6.77603 5.14454L6.77407 5.14454Z" fill="white" stroke="white"></path>
+														</svg>
+													</a>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="tab-pane fade" id="Monero">
+				<div class="row">
+					<div class="col-xl-3 col-xxl-4 mt-4">
+						<div class="card">
+							<div class="card-header pb-0 border-0">
+								<h4 class="card-title">About</h4>
+								<div class="dropdown custom-dropdown mb-0">
+									<div class="btn sharp tp-btn dark-btn" data-bs-toggle="dropdown">
+										<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M12.0049 13C12.5572 13 13.0049 12.5523 13.0049 12C13.0049 11.4477 12.5572 11 12.0049 11C11.4526 11 11.0049 11.4477 11.0049 12C11.0049 12.5523 11.4526 13 12.0049 13Z" stroke="#342E59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+											<path d="M12.0049 6C12.5572 6 13.0049 5.55228 13.0049 5C13.0049 4.44772 12.5572 4 12.0049 4C11.4526 4 11.0049 4.44772 11.0049 5C11.0049 5.55228 11.4526 6 12.0049 6Z" stroke="#342E59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+											<path d="M12.0049 20C12.5572 20 13.0049 19.5523 13.0049 19C13.0049 18.4477 12.5572 18 12.0049 18C11.4526 18 11.0049 18.4477 11.0049 19C11.0049 19.5523 11.4526 20 12.0049 20Z" stroke="#342E59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</div>
+									<div class="dropdown-menu dropdown-menu-right">
+										<a class="dropdown-item" href="javascript:void(0);">Details</a>
+										<a class="dropdown-item text-danger" href="javascript:void(0);">Cancel</a>
+									</div>
+								</div>
+							</div>
+							<div class="card-body dlab-scroll height400">
+								<div class="d-flex align-items-start mb-3 about-coin">
+									<div>
+										<img src="~/Finlab/images/svg/monero.svg" class="avatar" alt="">
+									</div>
+									<div class="ms-3">
+										<h4 class="mb-0">Digital Cash</h4>
+										<p class="mb-2">BTC</p>
+										<p class="mb-0">1 BTC = 68.48 USD</p>
+									</div>
+								</div>
+								<p>Dash is an open source cryptocurrency. It is an altcoin that was forked from the Bitcoin protocol. It is also a decentralized autonomous organization (DAO) run by a subset of its users, which are called "masternodes". The currency permits transactions that can be untraceable.</p>
+								<p>Dash is an open source cryptocurrency. It is an altcoin that was forked from the Bitcoin protocol. It is also a decentralized autonomous organization (DAO) run by a subset of its users, which are called "masternodes". The currency permits transactions that can be untraceable.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-9 col-xxl-8 mt-4">
+						<div class="card market_chart">
+							<div class="card-header border-0 align-items-start flex-wrap pb-0">
+								<div>
+									<h2 class="card-title">Coin Chart</h2>
+									<div class="market-data">
+										<div class="income data">
+											<p class="mb-0">This Month</p>
+											<h4>$29.999.00</h4>
+										</div>
+										<div class="price data">
+											<p class="mb-0">Price</p>
+											<h4>480 <sub>- 0,5%</sub></h4>
+										</div>
+										<div class="rate data">
+											<p class="mb-0">Rate</p>
+											<h4>-0.0662%/hr</h4>
+										</div>
+										<div class="volume data">
+											<p class="mb-0">volume</p>
+											<h4>175k</h4>
+										</div>
+
+									</div>
+								</div>
+								<div class="d-flex align-items-center">
+									<select class="image-select default-select dashboard-select me-4" aria-label="Default">
+										<option selected>This Month</option>
+										<option value="1">Weeks</option>
+										<option value="2">Today</option>
+									</select>
+									<div class="dropdown">
+										<a href="javascript:void(0);" class="btn-link btn sharp tp-btn btn-primary pill" data-bs-toggle="dropdown" aria-expanded="false">
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.33319 9.99985C8.33319 10.9203 9.07938 11.6665 9.99986 11.6665C10.9203 11.6665 11.6665 10.9203 11.6665 9.99986C11.6665 9.07938 10.9203 8.33319 9.99986 8.33319C9.07938 8.33319 8.33319 9.07938 8.33319 9.99985Z" fill="#ffffff" />
+												<path d="M8.33319 3.33329C8.33319 4.25376 9.07938 4.99995 9.99986 4.99995C10.9203 4.99995 11.6665 4.25376 11.6665 3.33329C11.6665 2.41282 10.9203 1.66663 9.99986 1.66663C9.07938 1.66663 8.33319 2.41282 8.33319 3.33329Z" fill="#ffffff" />
+												<path d="M8.33319 16.6667C8.33319 17.5871 9.07938 18.3333 9.99986 18.3333C10.9203 18.3333 11.6665 17.5871 11.6665 16.6667C11.6665 15.7462 10.9203 15 9.99986 15C9.07938 15 8.33319 15.7462 8.33319 16.6667Z" fill="#ffffff" />
+											</svg>
+
+										</a>
+										<div class="dropdown-menu dropdown-menu-end">
+											<a class="dropdown-item" href="javascript:void(0);">Delete</a>
+											<a class="dropdown-item" href="javascript:void(0);">Edit</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card-body custome-tooltip py-0 px-3">
+								<div id="activity3"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xl-3 col-xxl-6 col-md-6">
+						<div class="card">
+							<div class="card-header border-0 pb-0">
+								<h4 class="card-title">Sell Order</h4>
+								<div class="dropdown">
+									<a href="javascript:void(0);" class="btn-link btn sharp tp-btn btn-primary pill" data-bs-toggle="dropdown" aria-expanded="false">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8.33319 9.99985C8.33319 10.9203 9.07938 11.6665 9.99986 11.6665C10.9203 11.6665 11.6665 10.9203 11.6665 9.99986C11.6665 9.07938 10.9203 8.33319 9.99986 8.33319C9.07938 8.33319 8.33319 9.07938 8.33319 9.99985Z" fill="#ffffff"></path>
+											<path d="M8.33319 3.33329C8.33319 4.25376 9.07938 4.99995 9.99986 4.99995C10.9203 4.99995 11.6665 4.25376 11.6665 3.33329C11.6665 2.41282 10.9203 1.66663 9.99986 1.66663C9.07938 1.66663 8.33319 2.41282 8.33319 3.33329Z" fill="#ffffff"></path>
+											<path d="M8.33319 16.6667C8.33319 17.5871 9.07938 18.3333 9.99986 18.3333C10.9203 18.3333 11.6665 17.5871 11.6665 16.6667C11.6665 15.7462 10.9203 15 9.99986 15C9.07938 15 8.33319 15.7462 8.33319 16.6667Z" fill="#ffffff"></path>
+										</svg>
+
+									</a>
+									<div class="dropdown-menu dropdown-menu-end">
+										<a class="dropdown-item" href="javascript:void(0);">Delete</a>
+										<a class="dropdown-item" href="javascript:void(0);">Edit</a>
+									</div>
+								</div>
+							</div>
+							<div class="card-body p-3">
+								<div class="table-responsive">
+									<table class="table text-center bg-warning-hover tr-rounded order-tbl">
+										<thead>
+											<tr>
+												<th class="text-left">Price</th>
+												<th class="text-center">Amount</th>
+												<th class="text-right">Total</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="text-left">82.3</td>
+												<td>0.15</td>
+												<td class="text-right">$134,12</td>
+											</tr>
+											<tr>
+												<td class="text-left">83.9</td>
+												<td>0.18</td>
+												<td class="text-right">$237,31</td>
+											</tr>
+											<tr>
+												<td class="text-left">84.2</td>
+												<td>0.25</td>
+												<td class="text-right">$252,58</td>
+											</tr>
+											<tr>
+												<td class="text-left">86.2</td>
+												<td>0.35</td>
+												<td class="text-right">$126,26</td>
+											</tr>
+											<tr>
+												<td class="text-left">91.6</td>
+												<td>0.75</td>
+												<td class="text-right">$46,92</td>
+											</tr>
+											<tr>
+												<td class="text-left">92.6</td>
+												<td>0.21</td>
+												<td class="text-right">$123,27</td>
+											</tr>
+
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-xxl-6 col-md-6">
+						<div class="card">
+							<div class="card-header border-0 pb-0">
+								<h4 class="card-title">Buy Order</h4>
+								<div class="dropdown">
+									<a href="javascript:void(0);" class="btn-link btn sharp tp-btn btn-primary pill" data-bs-toggle="dropdown" aria-expanded="false">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8.33319 9.99985C8.33319 10.9203 9.07938 11.6665 9.99986 11.6665C10.9203 11.6665 11.6665 10.9203 11.6665 9.99986C11.6665 9.07938 10.9203 8.33319 9.99986 8.33319C9.07938 8.33319 8.33319 9.07938 8.33319 9.99985Z" fill="#ffffff"></path>
+											<path d="M8.33319 3.33329C8.33319 4.25376 9.07938 4.99995 9.99986 4.99995C10.9203 4.99995 11.6665 4.25376 11.6665 3.33329C11.6665 2.41282 10.9203 1.66663 9.99986 1.66663C9.07938 1.66663 8.33319 2.41282 8.33319 3.33329Z" fill="#ffffff"></path>
+											<path d="M8.33319 16.6667C8.33319 17.5871 9.07938 18.3333 9.99986 18.3333C10.9203 18.3333 11.6665 17.5871 11.6665 16.6667C11.6665 15.7462 10.9203 15 9.99986 15C9.07938 15 8.33319 15.7462 8.33319 16.6667Z" fill="#ffffff"></path>
+										</svg>
+
+									</a>
+									<div class="dropdown-menu dropdown-menu-end">
+										<a class="dropdown-item" href="javascript:void(0);">Delete</a>
+										<a class="dropdown-item" href="javascript:void(0);">Edit</a>
+									</div>
+								</div>
+							</div>
+							<div class="card-body pb-0 pt-3">
+								<div class="table-responsive">
+									<table class="table text-center bg-warning-hover tr-rounded order-tbl">
+										<thead>
+											<tr>
+												<th class="text-left">Price</th>
+												<th class="text-center">Amount</th>
+												<th class="text-right">Total</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="text-left">82.3</td>
+												<td>0.15</td>
+												<td class="text-right">$134,12</td>
+											</tr>
+											<tr>
+												<td class="text-left">83.9</td>
+												<td>0.18</td>
+												<td class="text-right">$237,31</td>
+											</tr>
+											<tr>
+												<td class="text-left">84.2</td>
+												<td>0.25</td>
+												<td class="text-right">$252,58</td>
+											</tr>
+											<tr>
+												<td class="text-left">86.2</td>
+												<td>0.35</td>
+												<td class="text-right">$126,26</td>
+											</tr>
+											<tr>
+												<td class="text-left">91.6</td>
+												<td>0.75</td>
+												<td class="text-right">$46,92</td>
+											</tr>
+											<tr>
+												<td class="text-left">92.6</td>
+												<td>0.21</td>
+												<td class="text-right">$123,27</td>
+											</tr>
+
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-6 col-xxl-12">
+						<div class="card">
+							<div class="card-header d-sm-flex d-block pb-0 border-0">
+								<div>
+									<h4 class="card-title">Quick Trade</h4>
+									<p class="mb-0">Lorem ipsum dolor sit amet, consectetur</p>
+								</div>
+								<select class="form-control custom-image-select image-select mt-3 mt-sm-0 w-auto">
+									<option data-thumbnail="../Finlab/images/svg/ltc.svg">Yearly (2023)</option>
+									<option data-thumbnail="../Finlab/images/svg/eth.svg">Weekly (2023)</option>
+									<option data-thumbnail="../Finlab/images/svg/btc.svg">Daily (2023)</option>
+								</select>
+							</div>
+							<div class="card-body">
+								<div class="basic-form">
+									<form class="form-wrapper">
+										<input type="hidden" name="_token" value="QyZgACk6bn1Ou8GRCgc1kF1HKsRPN7X6C6oCdQJt">									<div class="form-group">
+											<div class="input-group mb-3">
+												<span class="input-group-text" id="basic-addon104">Amount BTC</span>
+												<input type="text" class="form-control text-end" placeholder="52.5" aria-label="Username" aria-describedby="basic-addon104">
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="input-group mb-3">
+												<span class="input-group-text" id="basic-addon105">Price BPL</span>
+												<input type="text" class="form-control text-end" placeholder="52.5" aria-label="Username" aria-describedby="basic-addon105">
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="input-group mb-3">
+												<span class="input-group-text" id="basic-addon107">Fee (1%)</span>
+												<input type="number" class="form-control text-end" placeholder="52.5" aria-label="Username" aria-describedby="basic-addon107">
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="input-group mb-3">
+												<span class="input-group-text" id="basic-addon106">Fee (1%)</span>
+												<input type="number" class="form-control text-end" placeholder="52.5" aria-label="Username" aria-describedby="basic-addon106">
+											</div>
+										</div>
+										<div class="row mt-4 align-items-center">
+											<div class="col-lg-6">
+												<div>
+													<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
+												</div>
+											</div>
+											<div class="col-lg-6">
+												<div class="d-flex justify-content-end">
+													<a href="javascript:void(0);" class="btn btn-success">
+														BUY
+														<svg class="ms-2" width="16" height="12" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M16.9638 11.5104L16.9721 14.9391L3.78954 1.7565C3.22815 1.19511 2.31799 1.19511 1.75661 1.7565C1.19522 2.31789 1.19522 3.22805 1.75661 3.78943L14.9392 16.972L11.5105 16.9637L11.5105 16.9637C10.7166 16.9619 10.0715 17.6039 10.0696 18.3978C10.0677 19.1919 10.7099 19.8369 11.5036 19.8388L11.5049 19.3388L11.5036 19.8388L18.3976 19.8554L18.4146 19.8555L18.4159 19.8555C18.418 19.8555 18.42 19.8555 18.422 19.8555C19.2131 19.8533 19.8528 19.2114 19.8555 18.4231C19.8556 18.4196 19.8556 18.4158 19.8556 18.4117L19.8389 11.5035L19.8389 11.5035C19.8369 10.7097 19.1919 10.0676 18.3979 10.0695C17.604 10.0713 16.9619 10.7164 16.9638 11.5103L16.9638 11.5104Z" fill="white" stroke="white"></path>
+														</svg>
+													</a>
+													<a href="javascript:void(0);" class="btn btn-danger ms-3">
+														SELL
+														<svg class="ms-4" width="16" height="16" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M5.35182 13.4965L5.35182 13.4965L5.33512 6.58823C5.33508 6.5844 5.3351 6.58084 5.33514 6.57759M5.35182 13.4965L5.83514 6.58306L5.33514 6.58221C5.33517 6.56908 5.33572 6.55882 5.33597 6.5545L5.33606 6.55298C5.33585 6.55628 5.33533 6.56514 5.33516 6.57648C5.33515 6.57684 5.33514 6.57721 5.33514 6.57759M5.35182 13.4965C5.35375 14.2903 5.99878 14.9324 6.79278 14.9305C7.58669 14.9287 8.22874 14.2836 8.22686 13.4897L8.22686 13.4896L8.21853 10.0609M5.35182 13.4965L8.21853 10.0609M5.33514 6.57759C5.33752 5.789 5.97736 5.14667 6.76872 5.14454C6.77041 5.14452 6.77217 5.14451 6.77397 5.14451L6.77603 5.1445L6.79319 5.14456L13.687 5.16121L13.6858 5.66121L13.687 5.16121C14.4807 5.16314 15.123 5.80809 15.1211 6.6022C15.1192 7.3961 14.4741 8.03814 13.6802 8.03626L13.6802 8.03626L10.2515 8.02798L23.4341 21.2106C23.9955 21.772 23.9955 22.6821 23.4341 23.2435C22.8727 23.8049 21.9625 23.8049 21.4011 23.2435L8.21853 10.0609M5.33514 6.57759C5.33513 6.57959 5.33514 6.58159 5.33514 6.5836L8.21853 10.0609M6.77407 5.14454C6.77472 5.14454 6.77537 5.14454 6.77603 5.14454L6.77407 5.14454Z" fill="white" stroke="white"></path>
+														</svg>
+													</a>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="tab-pane fade" id="Litecoin">
+				<div class="row">
+					<div class="col-xl-3 col-xxl-4 mt-4">
+						<div class="card">
+							<div class="card-header pb-0 border-0">
+								<h4 class="card-title">About</h4>
+								<div class="dropdown custom-dropdown mb-0">
+									<div class="btn sharp tp-btn dark-btn" data-bs-toggle="dropdown">
+										<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M12.0049 13C12.5572 13 13.0049 12.5523 13.0049 12C13.0049 11.4477 12.5572 11 12.0049 11C11.4526 11 11.0049 11.4477 11.0049 12C11.0049 12.5523 11.4526 13 12.0049 13Z" stroke="#342E59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+											<path d="M12.0049 6C12.5572 6 13.0049 5.55228 13.0049 5C13.0049 4.44772 12.5572 4 12.0049 4C11.4526 4 11.0049 4.44772 11.0049 5C11.0049 5.55228 11.4526 6 12.0049 6Z" stroke="#342E59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+											<path d="M12.0049 20C12.5572 20 13.0049 19.5523 13.0049 19C13.0049 18.4477 12.5572 18 12.0049 18C11.4526 18 11.0049 18.4477 11.0049 19C11.0049 19.5523 11.4526 20 12.0049 20Z" stroke="#342E59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</div>
+									<div class="dropdown-menu dropdown-menu-right">
+										<a class="dropdown-item" href="javascript:void(0);">Details</a>
+										<a class="dropdown-item text-danger" href="javascript:void(0);">Cancel</a>
+									</div>
+								</div>
+							</div>
+							<div class="card-body dlab-scroll height400">
+								<div class="d-flex align-items-start mb-3 about-coin">
+									<div>
+										<img src="~/Finlab/images/svg/ltc.svg" class="avatar" alt="">
+									</div>
+									<div class="ms-3">
+										<h4 class="mb-0">Digital Cash</h4>
+										<p class="mb-2">BTC</p>
+										<p class="mb-0">1 BTC = 68.48 USD</p>
+									</div>
+								</div>
+								<p>Dash is an open source cryptocurrency. It is an altcoin that was forked from the Bitcoin protocol. It is also a decentralized autonomous organization (DAO) run by a subset of its users, which are called "masternodes". The currency permits transactions that can be untraceable.</p>
+								<p>Dash is an open source cryptocurrency. It is an altcoin that was forked from the Bitcoin protocol. It is also a decentralized autonomous organization (DAO) run by a subset of its users, which are called "masternodes". The currency permits transactions that can be untraceable.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-9 col-xxl-8 mt-4">
+						<div class="card market_chart">
+							<div class="card-header border-0 align-items-start flex-wrap pb-0">
+								<div>
+									<h2 class="card-title">Coin Chart</h2>
+									<div class="market-data">
+										<div class="income data">
+											<p class="mb-0">This Month</p>
+											<h4>$29.999.00</h4>
+										</div>
+										<div class="price data">
+											<p class="mb-0">Price</p>
+											<h4>480 <sub>- 0,5%</sub></h4>
+										</div>
+										<div class="rate data">
+											<p class="mb-0">Rate</p>
+											<h4>-0.0662%/hr</h4>
+										</div>
+										<div class="volume data">
+											<p class="mb-0">volume</p>
+											<h4>175k</h4>
+										</div>
+
+									</div>
+								</div>
+								<div class="d-flex align-items-center">
+									<select class="image-select default-select dashboard-select me-4" aria-label="Default">
+										<option selected>This Month</option>
+										<option value="1">Weeks</option>
+										<option value="2">Today</option>
+									</select>
+									<div class="dropdown">
+										<a href="javascript:void(0);" class="btn-link btn sharp tp-btn btn-primary pill" data-bs-toggle="dropdown" aria-expanded="false">
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.33319 9.99985C8.33319 10.9203 9.07938 11.6665 9.99986 11.6665C10.9203 11.6665 11.6665 10.9203 11.6665 9.99986C11.6665 9.07938 10.9203 8.33319 9.99986 8.33319C9.07938 8.33319 8.33319 9.07938 8.33319 9.99985Z" fill="#ffffff" />
+												<path d="M8.33319 3.33329C8.33319 4.25376 9.07938 4.99995 9.99986 4.99995C10.9203 4.99995 11.6665 4.25376 11.6665 3.33329C11.6665 2.41282 10.9203 1.66663 9.99986 1.66663C9.07938 1.66663 8.33319 2.41282 8.33319 3.33329Z" fill="#ffffff" />
+												<path d="M8.33319 16.6667C8.33319 17.5871 9.07938 18.3333 9.99986 18.3333C10.9203 18.3333 11.6665 17.5871 11.6665 16.6667C11.6665 15.7462 10.9203 15 9.99986 15C9.07938 15 8.33319 15.7462 8.33319 16.6667Z" fill="#ffffff" />
+											</svg>
+
+										</a>
+										<div class="dropdown-menu dropdown-menu-end">
+											<a class="dropdown-item" href="javascript:void(0);">Delete</a>
+											<a class="dropdown-item" href="javascript:void(0);">Edit</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card-body custome-tooltip py-0 px-3">
+								<div id="activity4"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xl-3 col-xxl-6 col-md-6">
+						<div class="card">
+							<div class="card-header border-0 pb-0">
+								<h4 class="card-title">Sell Order</h4>
+								<div class="dropdown">
+									<a href="javascript:void(0);" class="btn-link btn sharp tp-btn btn-primary pill" data-bs-toggle="dropdown" aria-expanded="false">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8.33319 9.99985C8.33319 10.9203 9.07938 11.6665 9.99986 11.6665C10.9203 11.6665 11.6665 10.9203 11.6665 9.99986C11.6665 9.07938 10.9203 8.33319 9.99986 8.33319C9.07938 8.33319 8.33319 9.07938 8.33319 9.99985Z" fill="#ffffff"></path>
+											<path d="M8.33319 3.33329C8.33319 4.25376 9.07938 4.99995 9.99986 4.99995C10.9203 4.99995 11.6665 4.25376 11.6665 3.33329C11.6665 2.41282 10.9203 1.66663 9.99986 1.66663C9.07938 1.66663 8.33319 2.41282 8.33319 3.33329Z" fill="#ffffff"></path>
+											<path d="M8.33319 16.6667C8.33319 17.5871 9.07938 18.3333 9.99986 18.3333C10.9203 18.3333 11.6665 17.5871 11.6665 16.6667C11.6665 15.7462 10.9203 15 9.99986 15C9.07938 15 8.33319 15.7462 8.33319 16.6667Z" fill="#ffffff"></path>
+										</svg>
+
+									</a>
+									<div class="dropdown-menu dropdown-menu-end">
+										<a class="dropdown-item" href="javascript:void(0);">Delete</a>
+										<a class="dropdown-item" href="javascript:void(0);">Edit</a>
+									</div>
+								</div>
+							</div>
+							<div class="card-body p-3">
+								<div class="table-responsive">
+									<table class="table text-center bg-warning-hover tr-rounded order-tbl">
+										<thead>
+											<tr>
+												<th class="text-left">Price</th>
+												<th class="text-center">Amount</th>
+												<th class="text-right">Total</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="text-left">82.3</td>
+												<td>0.15</td>
+												<td class="text-right">$134,12</td>
+											</tr>
+											<tr>
+												<td class="text-left">83.9</td>
+												<td>0.18</td>
+												<td class="text-right">$237,31</td>
+											</tr>
+											<tr>
+												<td class="text-left">84.2</td>
+												<td>0.25</td>
+												<td class="text-right">$252,58</td>
+											</tr>
+											<tr>
+												<td class="text-left">86.2</td>
+												<td>0.35</td>
+												<td class="text-right">$126,26</td>
+											</tr>
+											<tr>
+												<td class="text-left">91.6</td>
+												<td>0.75</td>
+												<td class="text-right">$46,92</td>
+											</tr>
+											<tr>
+												<td class="text-left">92.6</td>
+												<td>0.21</td>
+												<td class="text-right">$123,27</td>
+											</tr>
+
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-xxl-6 col-md-6">
+						<div class="card">
+							<div class="card-header border-0 pb-0">
+								<h4 class="card-title">Buy Order</h4>
+								<div class="dropdown">
+									<a href="javascript:void(0);" class="btn-link btn sharp tp-btn btn-primary pill" data-bs-toggle="dropdown" aria-expanded="false">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8.33319 9.99985C8.33319 10.9203 9.07938 11.6665 9.99986 11.6665C10.9203 11.6665 11.6665 10.9203 11.6665 9.99986C11.6665 9.07938 10.9203 8.33319 9.99986 8.33319C9.07938 8.33319 8.33319 9.07938 8.33319 9.99985Z" fill="#ffffff"></path>
+											<path d="M8.33319 3.33329C8.33319 4.25376 9.07938 4.99995 9.99986 4.99995C10.9203 4.99995 11.6665 4.25376 11.6665 3.33329C11.6665 2.41282 10.9203 1.66663 9.99986 1.66663C9.07938 1.66663 8.33319 2.41282 8.33319 3.33329Z" fill="#ffffff"></path>
+											<path d="M8.33319 16.6667C8.33319 17.5871 9.07938 18.3333 9.99986 18.3333C10.9203 18.3333 11.6665 17.5871 11.6665 16.6667C11.6665 15.7462 10.9203 15 9.99986 15C9.07938 15 8.33319 15.7462 8.33319 16.6667Z" fill="#ffffff"></path>
+										</svg>
+
+									</a>
+									<div class="dropdown-menu dropdown-menu-end">
+										<a class="dropdown-item" href="javascript:void(0);">Delete</a>
+										<a class="dropdown-item" href="javascript:void(0);">Edit</a>
+									</div>
+								</div>
+							</div>
+							<div class="card-body pb-0 pt-3">
+								<div class="table-responsive">
+									<table class="table text-center bg-warning-hover tr-rounded order-tbl">
+										<thead>
+											<tr>
+												<th class="text-left">Price</th>
+												<th class="text-center">Amount</th>
+												<th class="text-right">Total</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="text-left">82.3</td>
+												<td>0.15</td>
+												<td class="text-right">$134,12</td>
+											</tr>
+											<tr>
+												<td class="text-left">83.9</td>
+												<td>0.18</td>
+												<td class="text-right">$237,31</td>
+											</tr>
+											<tr>
+												<td class="text-left">84.2</td>
+												<td>0.25</td>
+												<td class="text-right">$252,58</td>
+											</tr>
+											<tr>
+												<td class="text-left">86.2</td>
+												<td>0.35</td>
+												<td class="text-right">$126,26</td>
+											</tr>
+											<tr>
+												<td class="text-left">91.6</td>
+												<td>0.75</td>
+												<td class="text-right">$46,92</td>
+											</tr>
+											<tr>
+												<td class="text-left">92.6</td>
+												<td>0.21</td>
+												<td class="text-right">$123,27</td>
+											</tr>
+
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-6 col-xxl-12">
+						<div class="card">
+							<div class="card-header d-sm-flex d-block pb-0 border-0">
+								<div>
+									<h4 class="card-title">Quick Trade</h4>
+									<p class="mb-0">Lorem ipsum dolor sit amet, consectetur</p>
+								</div>
+								<select class="form-control custom-image-select image-select mt-3 mt-sm-0 w-auto">
+									<option data-thumbnail="../Finlab/images/svg/ltc.svg">Yearly (2023)</option>
+									<option data-thumbnail="../Finlab/images/svg/eth.svg">Weekly (2023)</option>
+									<option data-thumbnail="../Finlab/images/svg/btc.svg">Daily (2023)</option>
+								</select>
+							</div>
+							<div class="card-body">
+								<div class="basic-form">
+									<form class="form-wrapper">
+										<input type="hidden" name="_token" value="QyZgACk6bn1Ou8GRCgc1kF1HKsRPN7X6C6oCdQJt">									<div class="form-group">
+											<div class="input-group mb-3">
+												<span class="input-group-text" id="basic-addon3">Amount BTC</span>
+												<input type="text" class="form-control text-end" placeholder="52.5" aria-label="Username" aria-describedby="basic-addon3">
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="input-group mb-3">
+												<span class="input-group-text" id="basic-addon4">Price BPL</span>
+												<input type="text" class="form-control text-end" placeholder="52.5" aria-label="Username" aria-describedby="basic-addon4">
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="input-group mb-3">
+												<span class="input-group-text" id="basic-addon5">Fee (1%)</span>
+												<input type="number" class="form-control text-end" placeholder="52.5" aria-label="Username" aria-describedby="basic-addon5">
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="input-group mb-3">
+												<span class="input-group-text" id="basic-addon6">Fee (1%)</span>
+												<input type="number" class="form-control text-end" placeholder="52.5" aria-label="Username" aria-describedby="basic-addon6">
+											</div>
+										</div>
+										<div class="row mt-4 align-items-center">
+											<div class="col-lg-6">
+												<div>
+													<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
+												</div>
+											</div>
+											<div class="col-lg-6">
+												<div class="d-flex justify-content-end">
+													<a href="javascript:void(0);" class="btn btn-success">
+														BUY
+														<svg class="ms-2" width="16" height="12" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M16.9638 11.5104L16.9721 14.9391L3.78954 1.7565C3.22815 1.19511 2.31799 1.19511 1.75661 1.7565C1.19522 2.31789 1.19522 3.22805 1.75661 3.78943L14.9392 16.972L11.5105 16.9637L11.5105 16.9637C10.7166 16.9619 10.0715 17.6039 10.0696 18.3978C10.0677 19.1919 10.7099 19.8369 11.5036 19.8388L11.5049 19.3388L11.5036 19.8388L18.3976 19.8554L18.4146 19.8555L18.4159 19.8555C18.418 19.8555 18.42 19.8555 18.422 19.8555C19.2131 19.8533 19.8528 19.2114 19.8555 18.4231C19.8556 18.4196 19.8556 18.4158 19.8556 18.4117L19.8389 11.5035L19.8389 11.5035C19.8369 10.7097 19.1919 10.0676 18.3979 10.0695C17.604 10.0713 16.9619 10.7164 16.9638 11.5103L16.9638 11.5104Z" fill="white" stroke="white"></path>
+														</svg>
+													</a>
+													<a href="javascript:void(0);" class="btn btn-danger ms-3">
+														SELL
+														<svg class="ms-4" width="16" height="16" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M5.35182 13.4965L5.35182 13.4965L5.33512 6.58823C5.33508 6.5844 5.3351 6.58084 5.33514 6.57759M5.35182 13.4965L5.83514 6.58306L5.33514 6.58221C5.33517 6.56908 5.33572 6.55882 5.33597 6.5545L5.33606 6.55298C5.33585 6.55628 5.33533 6.56514 5.33516 6.57648C5.33515 6.57684 5.33514 6.57721 5.33514 6.57759M5.35182 13.4965C5.35375 14.2903 5.99878 14.9324 6.79278 14.9305C7.58669 14.9287 8.22874 14.2836 8.22686 13.4897L8.22686 13.4896L8.21853 10.0609M5.35182 13.4965L8.21853 10.0609M5.33514 6.57759C5.33752 5.789 5.97736 5.14667 6.76872 5.14454C6.77041 5.14452 6.77217 5.14451 6.77397 5.14451L6.77603 5.1445L6.79319 5.14456L13.687 5.16121L13.6858 5.66121L13.687 5.16121C14.4807 5.16314 15.123 5.80809 15.1211 6.6022C15.1192 7.3961 14.4741 8.03814 13.6802 8.03626L13.6802 8.03626L10.2515 8.02798L23.4341 21.2106C23.9955 21.772 23.9955 22.6821 23.4341 23.2435C22.8727 23.8049 21.9625 23.8049 21.4011 23.2435L8.21853 10.0609M5.33514 6.57759C5.33513 6.57959 5.33514 6.58159 5.33514 6.5836L8.21853 10.0609M6.77407 5.14454C6.77472 5.14454 6.77537 5.14454 6.77603 5.14454L6.77407 5.14454Z" fill="white" stroke="white"></path>
+														</svg>
+													</a>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+@section Finlab_style
+	{
+}
+@section Finlab_script
+	{
+	<script src="~/Finlab/vendor/global/global.min.js"></script>
+	<script src="~/Finlab/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+	<script src="~/Finlab/vendor/apexchart/apexchart.js"></script>
+	<script src="~/Finlab/js/dashboard/crypto.js"></script>
+	<script src="~/Finlab/js/custom.min.js"></script>
+	<script src="~/Finlab/js/dlabnav-init.js"></script>
+	
+	
+}

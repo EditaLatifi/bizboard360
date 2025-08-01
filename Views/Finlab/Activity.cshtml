@@ -1,0 +1,172 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutFinlab.cshtml";
+}
+<div class="content-body default-height">
+	<!-- row -->
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xl-12">
+				<div class="page-titles">
+					<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="#">File Manager</a></li>
+							<li class="breadcrumb-item active" aria-current="page">Activity</li>
+						</ol>
+					</nav>
+					<div class="d-flex align-items-center flex-wrap ps-md-0 pt-md-0 pt-2  ps-sm-4 ">
+						<div class="me-2">
+							<button type="button" class="btn light btn-primary btn-sm mx-sm-1 mx-0 mb-sm-0 mb-2 ">Activity</button>
+							<button type="button" class="btn light btn-primary btn-sm mx-1 mb-sm-0 mb-2">Notifications</button>
+						</div>
+						<select class="image-select default-select dashboard-select" aria-label="Default">
+							<option selected="">Recently</option>
+							<option value="1">This Weeks</option>
+							<option value="2">Today</option>
+						</select>
+						<div class="dropdown custom-dropdown ms-2 mb-0">
+							<div class="btn sharp btn-primary tp-btn " data-bs-toggle="dropdown">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="12" cy="5" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="19" r="2"></circle></g></svg>
+							</div>
+							<div class="dropdown-menu dropdown-menu-end">
+								<a class="dropdown-item" href="javascript:void(0);">Option 1</a>
+								<a class="dropdown-item" href="javascript:void(0);">Option 2</a>
+								<a class="dropdown-item" href="javascript:void(0);">Option 3</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="col-xl-12">
+				<div class="">
+					<div class="card activity">
+						<div class="card-body pt-0">
+							<div id="DZ_W_TimeLine11" class="widget-timeline style-3 ">
+								<h4 class="mt-3 card-title">Today</h4>
+								<ul class="timeline-active">
+									<li class="d-flex align-items-baseline timeline-list">
+										<div class="dz-media">
+											<img src="~/Finlab/images/profile/14.jpg" class="avatar" alt="">
+										</div>
+										<div class="panel">
+											<a class="timeline-panel text-muted d-flex align-items-center" href="#">
+												<p class="mb-0"><strong>Karen Hope</strong> has created new task at <strong>FinLab</strong> <strong class="text-primary">Projects</strong> </p>
+											</a>
+											<div class="modulel flex-wrap">
+												<div class="dz-media">
+													<img src="~/Finlab/images/profile/15.jpg" class="rounded" alt="">
+												</div>
+												<div class="dz-media">
+													<img src="~/Finlab/images/profile/16.jpg" class="rounded" alt="">
+												</div>
+											</div>
+										</div>
+										<p class="mb-0 d-none d-sm-block">Monday, June 31 2020</p>
+									</li>
+									<li class="d-flex align-items-baseline timeline-list">
+										<div class="dz-media">
+											<img src="~/Finlab/images/profile/17.jpg" class="avatar" alt="">
+										</div>
+										<div class="panel">
+											<a class="timeline-panel text-muted d-flex align-items-center" href="#">
+												<p><strong class="text-pink">[REMINDER] </strong> Due date of <strong class="text-pink">Erempe Studios Projects</strong> task will be coming</p>
+											</a>
+										</div>
+										<p class="time mb-0">Monday, June 31 2020</p>
+									</li>
+									<li class="d-flex align-items-baseline timeline-list">
+										<div class="dz-media">
+											<img src="~/Finlab/images/profile/18.jpg" class="avatar" alt="">
+										</div>
+										<div class="panel">
+											<a class="timeline-panel text-muted d-flex align-items-center" href="#">
+												<p class="mb-0"><strong>Tony Soap </strong> commented at <strong class="text-primary"> Frize Projects </strong></p>
+											</a>
+
+										</div>
+										<p class="time">Monday, June 31 2020</p>
+									</li>
+									<li class="d-flex align-items-baseline timeline-list">
+										<div class="dz-media">
+											<img src="~/Finlab/images/profile/19.jpg" class="avatar" alt="">
+										</div>
+										<div class="panel">
+											<a class="timeline-panel text-muted d-flex align-items-center" href="#">
+												<p><strong>Samantha William </strong> add 4 files on  Frize <strong class="text-danger">Projects </strong></p>
+											</a>
+											<div class="modulel flex-wrap">
+												<div class="dz-media">
+													<img src="~/Finlab/images/profile/21.jpg" class="rounded" alt="">
+												</div>
+												<div class="dz-media">
+													<img src="~/Finlab/images/profile/22.jpg" class="rounded" alt="">
+												</div>
+												<div class="dz-media">
+													<img src="~/Finlab/images/profile/23.jpg" class="rounded" alt="">
+												</div>
+												<div class="dz-media">
+													<img src="~/Finlab/images/profile/24.jpg" class="rounded" alt="">
+												</div>
+											</div>
+										</div>
+										<p class="mb-0">Monday, June 31 2020</p>
+									</li>
+								</ul>
+								<h4 class="mt-3 card-title">Yesterday</h4>
+								<ul class="timeline-active loadmore-content  recent-activity-wrapper " id="RecentActivityContent">
+									<li class="d-flex align-items-baseline timeline-list">
+										<div class="dz-media">
+											<img src="~/Finlab/images/profile/25.jpg" class="avatar" alt="">
+										</div>
+										<div class="panel">
+											<a class="timeline-panel text-muted d-flex align-items-center" href="#">
+												<p class="mb-0"><strong>Johnny Ahmad </strong>  mentioned you at <strong class="text-primary"> Web Design Projects</strong></p>
+											</a>
+										</div>
+										<p class="mb-0">Monday, June 31 2020</p>
+									</li>
+									<li class="d-flex align-items-baseline timeline-list">
+										<div class="dz-media">
+											<img src="~/Finlab/images/profile/19.jpg" class="avatar rounded" alt="">
+										</div>
+										<div class="panel">
+											<a class="timeline-panel text-muted d-flex align-items-center" href="#">
+												<p class="mb-0"><strong>Nadila Adja  </strong> mentioned you at <strong class="text-pink"> Projects</strong> </p>
+											</a>
+										</div>
+										<p class="mb-0">Monday, June 31 2020</p>
+									</li>
+								</ul>
+
+							</div>
+							<div class="loadmore-btn text-center">
+								<a class="btn btn-primary  dlab-load-more" id="RecentActivity" rel="/Ajax/Activity ">Load More</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+	</div>
+</div>
+
+@section Finlab_style
+	{
+	<link href="~/Finlab/vendor/chartist/css/chartist.min.css" rel="stylesheet">
+	<link href="~/Finlab/vendor/wow-master/css/libs/animate.css" rel="stylesheet">
+}
+@section Finlab_script
+	{
+	<script src="~/Finlab/vendor/global/global.min.js"></script>
+	<script src="~/Finlab/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+
+	<!-- Chart piety plugin files -->
+
+	<script src="~/Finlab/js/custom.min.js"></script>
+	<script src="~/Finlab/js/dlabnav-init.js"></script>
+	
+	
+}

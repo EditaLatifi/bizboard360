@@ -1,0 +1,54 @@
+﻿@{
+    @using Microsoft.Extensions.Configuration
+    @inject IConfiguration Configuration
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <partial name="Finlab/_Meta" />
+    <title>@Configuration.GetSection("DefaultValue")["Title"]</title>
+    <!-- Favicon icon -->
+    <link rel="shortcut icon" type="image/png" href="~/Finlab/images/favicon.png">
+
+    <link href="~/Finlab/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+    <!--**********************************
+        Style script start
+    ***********************************-->
+    @RenderSection("Finlab_style", false)
+    <!--**********************************
+        Style script end
+    ***********************************-->
+    <!-- Style css -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link href="~/Finlab/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <partial name="Finlab/_PreLoader" />
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper" class="wallet-open active">
+        <partial name="Finlab/_NevHeader" />
+        <partial name="Finlab/_Chatbox" />
+        <partial name="Finlab/_Header" />
+        <partial name="Finlab/_Sidebar" />
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        @RenderBody()
+        <!--**********************************
+            Content body end
+        ***********************************-->
+        <partial name="Finlab/_Footer" />
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+    <partial name="Finlab/_ContactModel" />
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <!-- Required vendors -->
+    @RenderSection("Finlab_script", false)
+</body>
+</html>

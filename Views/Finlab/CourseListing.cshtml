@@ -1,0 +1,544 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutFinlab.cshtml";
+}
+<div class="content-body default-height">
+    <!-- row -->
+	<div class="container-fluid">
+		<div class="page-titles">
+			<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+				<ol class="breadcrumb">
+				  <li class="breadcrumb-item"><a href="#">Course</a></li>
+				  <li class="breadcrumb-item active" aria-current="page">Course List</li>
+				</ol>
+			  </nav>
+		</div>
+		<div class="widget-heading d-flex justify-content-between align-items-center">
+			<h3 class="m-0 card-title">Popular This Week</h3>
+			<a href="javascript:void(0);" class="btn btn-primary btn-sm">View all</a>
+		</div>
+		<div class="row">
+			<!-- Slider main container -->
+			<div class="swiper swiper-container course-slider">
+			  <!-- Additional required wrapper -->
+			  <div class="swiper-wrapper">
+				<!-- Slides -->
+				<div class="swiper-slide">
+					<div class="card">
+						<div class="card-body">
+							<div class="widget-courses align-items-center d-flex justify-content-between flex-wrap">
+								<div class="d-flex align-items-center flex-wrap">
+									<img src="~/Finlab/images/svg/school.svg" alt="">
+									<div class="flex-1 ms-3">
+										<h5 class="mb-0">Trade History</h5>
+										<P class="mb-0">Lorem ipsum dolor</p>
+									</div>	
+								</div>	
+								<a href="javascript:void(0);"><i class="las la-angle-right text-primary"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="card">
+						<div class="card-body">
+							<div class="widget-courses align-items-center d-flex justify-content-between flex-wrap">
+								<div class="d-flex align-items-center flex-wrap">
+									<img src="~/Finlab/images/svg/cryptowallet.svg" alt="">
+									<div class="flex-1 ms-3">
+										<h5 class="mb-0">Quick Transfer</h5>
+										<p class="mb-0">Lorem ipsum dolor</p>
+									</div>	
+								</div>	
+								<a href="javascript:void(0);"><i class="las la-angle-right text-primary"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="card">
+						<div class="card-body">
+							<div class="widget-courses align-items-center d-flex justify-content-between flex-wrap">
+								<div class="d-flex align-items-center flex-wrap">
+									<img src="~/Finlab/images/svg/cryptocurrency.svg" alt="">
+									<div class="flex-1 ms-3">
+										<h5 class="mb-0">Your Investments</h5>
+										<p class="mb-0">Lorem ipsum dolor</p>
+									</div>	
+								</div>	
+								<a href="javascript:void(0);"><i class="las la-angle-right text-primary"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="card">
+						<div class="card-body">
+							<div class="widget-courses align-items-center d-flex justify-content-between flex-wrap">
+								<div class="d-flex align-items-center flex-wrap">
+									<img src="~/Finlab/images/svg/wire-transfer.svg" alt="">
+									<div class="flex-1 ms-3">
+										<h5 class="mb-0">Your Investments</h5>
+										<p class="mb-0">Lorem ipsum dolor</p>
+									</div>	
+								</div>	
+								<a href="javascript:void(0);"><i class="las la-angle-right text-primary"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="card">
+						<div class="card-body">
+							<div class="widget-courses align-items-center d-flex justify-content-between flex-wrap">
+								<div class="d-flex align-items-center flex-wrap">
+									<img src="~/Finlab/images/svg/cryptocurrency.svg" alt="">
+									<div class="flex-1 ms-3">
+										<h5 class="mb-0">Your Investments</h5>
+										<p class="mb-0">Lorem ipsum dolor</p>
+									</div>	
+								</div>	
+								<a href="javascript:void(0);"><i class="las la-angle-right text-primary"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="card">
+						<div class="card-body">
+							<div class="widget-courses align-items-center d-flex justify-content-between flex-wrap">
+								<div class="d-flex align-items-center flex-wrap">
+									<img src="~/Finlab/images/svg/wire-transfer.svg" alt="">
+									<div class="flex-1 ms-3">
+										<h5 class="mb-0">Your Investments</h5>
+										<p class="mb-0">Lorem ipsum dolor</p>
+									</div>	
+								</div>	
+								<a href="javascript:void(0);"><i class="las la-angle-right text-primary"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			  </div>
+			</div>
+		</div>	
+		<div class="widget-heading d-flex justify-content-between align-items-center">
+			<h3 class="card-title mb-0">All Courses</h3>
+			<a href="javascript:void(0);" class="btn btn-primary btn-sm">View all</a>
+		</div>
+		<div class="row">
+			<div class="col-xl-3 col-xxl-4 col-sm-6">
+				<div class="card all-crs-wid">
+					<div class="card-body">
+						<div class="courses-bx">
+							<div class="dlab-media overlay-main position-relative">
+								<img src="~/Finlab/images/course/1.jpg" class="w-100 rounded" alt="">
+								<div class="overlay-bx">
+									<div class="overlay-icon">
+										<a href="https://www.youtube.com/watch?v=e6MhFghdQps" class="popup-course">
+											<i class="fa-solid fa-video"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="dlab-info">
+								<div class="dlab-title">
+									<h5><a href="@Url.Action("CourseDetails","Finlab")">Bitcoin and Cryptocurrencies Technologies</a></h5>
+									<div class="">
+										<p class="m-0">Samantha William
+											<svg class="ms-1" width="4" height="5" viewBox="0 0 4 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<circle cx="2" cy="2.5" r="2" fill="var(--primary)"/>
+											</svg>
+											<span>5.0<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8 0.5L9.79611 6.02786H15.6085L10.9062 9.44427L12.7023 14.9721L8 11.5557L3.29772 14.9721L5.09383 9.44427L0.391548 6.02786H6.20389L8 0.5Z" fill="#FEC64F"/>
+											</svg>
+											</span>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="d-flex justify-content-between content align-items-center">
+								<span>
+									<img src="~/Finlab/images/svg/bitcoin.svg" alt="">
+									110+ Content
+								</span>
+								<a href="@Url.Action("CourseDetails","Finlab")" class="btn btn-primary btn-sm light">View More</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+			<div class="col-xl-3 col-xxl-4 col-sm-6">
+				<div class="card all-crs-wid">
+					<div class="card-body">
+						<div class="courses-bx">
+							<div class="dlab-media overlay-main position-relative">
+								<img src="~/Finlab/images/course/2.jpg" class="w-100 rounded" alt="">
+								<div class="overlay-bx">
+									<div class="overlay-icon">
+										<a href="https://www.youtube.com/watch?v=e6MhFghdQps" class="popup-course">
+											<i class="fa-solid fa-video"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="dlab-info">
+								<div class="dlab-title">
+									<h5><a href="@Url.Action("CourseDetails","Finlab")">Bitcoin and Cryptocurrencies Technologies</a></h5>
+									<div class="">
+										<p class="m-0">Samantha William
+											<svg class="ms-1" width="4" height="5" viewBox="0 0 4 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<circle cx="2" cy="2.5" r="2" fill="var(--primary)"/>
+											</svg>
+											<span>5.0<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8 0.5L9.79611 6.02786H15.6085L10.9062 9.44427L12.7023 14.9721L8 11.5557L3.29772 14.9721L5.09383 9.44427L0.391548 6.02786H6.20389L8 0.5Z" fill="#FEC64F"/>
+											</svg>
+											</span>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="d-flex justify-content-between content align-items-center">
+								<span>
+									<img src="~/Finlab/images/svg/bitcoin.svg" alt="">
+									110+ Content
+								</span>
+								<a href="@Url.Action("CourseDetails","Finlab")" class="btn btn-primary btn-sm light">View More</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+			<div class="col-xl-3 col-xxl-4 col-sm-6">
+				<div class="card all-crs-wid">
+					<div class="card-body">
+						<div class="courses-bx">
+							<div class="dlab-media overlay-main position-relative">
+								<img src="~/Finlab/images/course/3.jpg" class="w-100 rounded" alt="">
+								<div class="overlay-bx">
+									<div class="overlay-icon">
+										<a href="https://www.youtube.com/watch?v=e6MhFghdQps" class="popup-course">
+											<i class="fa-solid fa-video"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="dlab-info">
+								<div class="dlab-title">
+									<h5><a href="@Url.Action("CourseDetails","Finlab")">Bitcoin and Cryptocurrencies Technologies</a></h5>
+									<div class="">
+										<p class="m-0">Samantha William
+											<svg class="ms-1" width="4" height="5" viewBox="0 0 4 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<circle cx="2" cy="2.5" r="2" fill="var(--primary)"/>
+											</svg>
+											<span>5.0<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8 0.5L9.79611 6.02786H15.6085L10.9062 9.44427L12.7023 14.9721L8 11.5557L3.29772 14.9721L5.09383 9.44427L0.391548 6.02786H6.20389L8 0.5Z" fill="#FEC64F"/>
+											</svg>
+											</span>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="d-flex justify-content-between content align-items-center">
+								<span>
+									<img src="~/Finlab/images/svg/bitcoin.svg" alt="">
+									110+ Content
+								</span>
+								<a href="@Url.Action("CourseDetails","Finlab")" class="btn btn-primary btn-sm light">View More</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+			<div class="col-xl-3 col-xxl-4 col-sm-6">
+				<div class="card all-crs-wid">
+					<div class="card-body">
+						<div class="courses-bx">
+							<div class="dlab-media overlay-main position-relative">
+								<img src="~/Finlab/images/course/4.jpg" class="w-100 rounded" alt="">
+								<div class="overlay-bx">
+									<div class="overlay-icon">
+										<a href="https://www.youtube.com/watch?v=e6MhFghdQps" class="popup-course">
+											<i class="fa-solid fa-video"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="dlab-info">
+								<div class="dlab-title">
+									<h5><a href="@Url.Action("CourseDetails","Finlab")">Blockchain – Principles and Practices</a></h5>
+									<div class="">
+										<p class="m-0">Samantha William
+											<svg class="ms-1" width="4" height="5" viewBox="0 0 4 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<circle cx="2" cy="2.5" r="2" fill="var(--primary)"/>
+											</svg>
+											<span>5.0<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8 0.5L9.79611 6.02786H15.6085L10.9062 9.44427L12.7023 14.9721L8 11.5557L3.29772 14.9721L5.09383 9.44427L0.391548 6.02786H6.20389L8 0.5Z" fill="#FEC64F"/>
+											</svg>
+											</span>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="d-flex justify-content-between content align-items-center">
+								<span>
+									<img src="~/Finlab/images/svg/bitcoin.svg" alt="">
+									110+ Content
+								</span>
+								<a href="@Url.Action("CourseDetails","Finlab")" class="btn btn-primary btn-sm light">View More</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+			<div class="col-xl-3 col-xxl-4 col-sm-6">
+				<div class="card all-crs-wid">
+					<div class="card-body">
+						<div class="courses-bx">
+							<div class="dlab-media overlay-main position-relative">
+								<img src="~/Finlab/images/course/5.jpg" class="w-100 rounded" alt="">
+								<div class="overlay-bx">
+									<div class="overlay-icon">
+										<a href="https://www.youtube.com/watch?v=e6MhFghdQps" class="popup-course">
+											<i class="fa-solid fa-video"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="dlab-info">
+								<div class="dlab-title">
+									<h5><a href="@Url.Action("CourseDetails","Finlab")">Introduction to Cryptocurrencies and Blockchain</a></h5>
+									<div class="">
+										<p class="m-0">Samantha William
+											<svg class="ms-1" width="4" height="5" viewBox="0 0 4 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<circle cx="2" cy="2.5" r="2" fill="var(--primary)"/>
+											</svg>
+											<span>5.0<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8 0.5L9.79611 6.02786H15.6085L10.9062 9.44427L12.7023 14.9721L8 11.5557L3.29772 14.9721L5.09383 9.44427L0.391548 6.02786H6.20389L8 0.5Z" fill="#FEC64F"/>
+											</svg>
+											</span>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="d-flex justify-content-between content align-items-center">
+								<span>
+									<img src="~/Finlab/images/svg/bitcoin.svg" alt="">
+									110+ Content
+								</span>
+								<a href="@Url.Action("CourseDetails","Finlab")" class="btn btn-primary btn-sm light">View More</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+			<div class="col-xl-3 col-xxl-4 col-sm-6">
+				<div class="card all-crs-wid">
+					<div class="card-body">
+						<div class="courses-bx">
+							<div class="dlab-media overlay-main position-relative">
+								<img src="~/Finlab/images/course/6.jpg" class="w-100 rounded" alt="">
+								<div class="overlay-bx">
+									<div class="overlay-icon">
+										<a href="https://www.youtube.com/watch?v=e6MhFghdQps" class="popup-course">
+											<i class="fa-solid fa-video"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="dlab-info">
+								<div class="dlab-title">
+									<h5><a href="@Url.Action("CourseDetails","Finlab")">Blockchain and Cryptocurrency Explained</a></h5>
+									<div class="">
+										<p class="m-0">Samantha William
+											<svg class="ms-1" width="4" height="5" viewBox="0 0 4 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<circle cx="2" cy="2.5" r="2" fill="var(--primary)"/>
+											</svg>
+											<span>5.0<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8 0.5L9.79611 6.02786H15.6085L10.9062 9.44427L12.7023 14.9721L8 11.5557L3.29772 14.9721L5.09383 9.44427L0.391548 6.02786H6.20389L8 0.5Z" fill="#FEC64F"/>
+											</svg>
+											</span>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="d-flex justify-content-between content align-items-center">
+								<span>
+									<img src="~/Finlab/images/svg/bitcoin.svg" alt="">
+									110+ Content
+								</span>
+								<a href="@Url.Action("CourseDetails","Finlab")" class="btn btn-primary btn-sm light">View More</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+			<div class="col-xl-3 col-xxl-4 col-sm-6">
+				<div class="card all-crs-wid">
+					<div class="card-body">
+						<div class="courses-bx">
+							<div class="dlab-media overlay-main position-relative">
+								<img src="~/Finlab/images/course/2.jpg" class="w-100 rounded" alt="">
+								<div class="overlay-bx">
+									<div class="overlay-icon">
+										<a href="https://www.youtube.com/watch?v=e6MhFghdQps" class="popup-course">
+											<i class="fa-solid fa-video"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="dlab-info">
+								<div class="dlab-title">
+									<h5><a href="@Url.Action("CourseDetails","Finlab")">Bitcoin and Cryptocurrencies Technologies</a></h5>
+									<div class="">
+										<p class="m-0">Samantha William
+											<svg class="ms-1" width="4" height="5" viewBox="0 0 4 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<circle cx="2" cy="2.5" r="2" fill="var(--primary)"/>
+											</svg>
+											<span>5.0<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8 0.5L9.79611 6.02786H15.6085L10.9062 9.44427L12.7023 14.9721L8 11.5557L3.29772 14.9721L5.09383 9.44427L0.391548 6.02786H6.20389L8 0.5Z" fill="#FEC64F"/>
+											</svg>
+											</span>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="d-flex justify-content-between content align-items-center">
+								<span>
+									<img src="~/Finlab/images/svg/bitcoin.svg" alt="">
+									110+ Content
+								</span>
+								<a href="@Url.Action("CourseDetails","Finlab")" class="btn btn-primary btn-sm light">View More</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+			<div class="col-xl-3 col-xxl-4 col-sm-6">
+				<div class="card all-crs-wid">
+					<div class="card-body">
+						<div class="courses-bx">
+							<div class="dlab-media overlay-main position-relative">
+								<img src="~/Finlab/images/course/1.jpg" class="w-100 rounded" alt="">
+								<div class="overlay-bx">
+									<div class="overlay-icon">
+										<a href="https://www.youtube.com/watch?v=e6MhFghdQps" class="popup-course">
+											<i class="fa-solid fa-video"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="dlab-info">
+								<div class="dlab-title">
+									<h5><a href="@Url.Action("CourseDetails","Finlab")">Bitcoin and Cryptocurrencies Technologies</a></h5>
+									<div class="">
+										<p class="m-0">Samantha William
+											<svg class="ms-1" width="4" height="5" viewBox="0 0 4 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<circle cx="2" cy="2.5" r="2" fill="var(--primary)"/>
+											</svg>
+											<span>5.0<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8 0.5L9.79611 6.02786H15.6085L10.9062 9.44427L12.7023 14.9721L8 11.5557L3.29772 14.9721L5.09383 9.44427L0.391548 6.02786H6.20389L8 0.5Z" fill="#FEC64F"/>
+											</svg>
+											</span>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="d-flex justify-content-between content align-items-center">
+								<span>
+									<img src="~/Finlab/images/svg/bitcoin.svg" alt="">
+									110+ Content
+								</span>
+								<a href="@Url.Action("CourseDetails","Finlab")" class="btn btn-primary btn-sm light">View More</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+			
+				
+		</div>
+		<div class="table-pagenation px-4">
+			<p>Showing <strong class="text-primary me-1">1-5</strong>from <strong class="text-primary me-1">100</strong>data</p>
+			<nav>
+				<ul class="pagination pagination-gutter pagination-primary no-bg">
+					<li class="page-item page-indicator">
+						<a class="page-link" href="javascript:void(0)">
+							<i class="fa-solid fa-angle-left"></i></a>
+					</li>
+					<li class="page-item "><a class="page-link" href="javascript:void(0)">1</a>
+					</li>
+					<li class="page-item active"><a class="page-link" href="javascript:void(0)">2</a></li>
+					<li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+					<li class="page-item page-indicator">
+						<a class="page-link" href="javascript:void(0)">
+							<i class="fa-solid fa-angle-right"></i></a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+    </div>
+</div>
+<partial name="Finlab\_EmailModal" />
+@section Finlab_style
+	{
+	<link href="~/Finlab/vendor/wow-master/css/libs/animate.css" rel="stylesheet">
+
+	<!--swiper-slider-->
+	<link href="~/Finlab/vendor/swiper/css/swiper-bundle.min.css" rel="stylesheet">
+	<link href="~/Finlab/vendor/magnific-popup/magnific-popup.min.css" rel="stylesheet">
+}
+@section Finlab_script
+	{
+		<script src="~/Finlab/vendor/global/global.min.js"></script>
+	<script src="~/Finlab/vendor/magnific-popup/magnific-popup.js"></script><!-- MAGNIFIC POPUP JS -->
+	<script src="~/Finlab/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+	
+	<!--swiper-slider-->
+	<script src="~/Finlab/vendor/swiper/js/swiper-bundle.min.js"></script>
+	<script src="~/Finlab/vendor/wow-master/dist/wow.min.js"></script>
+    <script src="~/Finlab/js/custom.min.js"></script>
+	<script src="~/Finlab/js/dlabnav-init.js"></script>
+	
+    
+	
+	<script>
+		var swiper = new Swiper(".course-slider", {
+		  slidesPerView: 4,
+		  spaceBetween: 30,
+		  pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		  },
+			breakpoints: {
+			  360: {
+				slidesPerView: 1,
+				spaceBetween: 20,
+			  },
+			  600: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			  },
+			  768: {
+				slidesPerView: 2,
+				spaceBetween: 30,
+			  },
+			  1024: {
+				slidesPerView: 2,
+				spaceBetween: 30,
+			  },
+			  1200: {
+				slidesPerView: 3,
+				spaceBetween: 30,
+			  },
+			  1400: {
+				slidesPerView: 4,
+				spaceBetween: 30,
+			  },
+			  1920: {
+				slidesPerView: 4,
+				spaceBetween: 30,
+			  },
+			}
+		});
+  </script>
+}

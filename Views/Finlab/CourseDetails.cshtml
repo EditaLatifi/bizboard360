@@ -1,0 +1,290 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutFinlab.cshtml";
+}
+<div class="content-body default-height">
+	<!-- row -->
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xl-12">
+				<div class="page-titles">
+					<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="#">Course</a></li>
+							<li class="breadcrumb-item active" aria-current="page">Course Details</li>
+						</ol>
+					</nav>
+				</div>
+				<div class="row">
+					<div class="col-xl-9 col-xxl-8">
+						<div class="card">
+							<div class="card-body">
+								<div class="course-content d-flex justify-content-between flex-wrap">
+									<div>
+										<h2 class="card-title">Bitcoin and Cryptocurrencies Technologies</h2>
+										<ul class="d-flex align-items-center raiting my-0 flex-wrap">
+											<li>
+												<p class="mb-0">5.0</p><i class="fas fa-star text-orange ms-2"></i>
+											</li>
+											<li>Review (1k)</li>
+											<li>10k Students</li>
+										</ul>
+									</div>
+									<div>
+										<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M19.5 3.35248H18.3825V2.625C18.3825 2.00999 17.88 1.5 17.2575 1.5C16.635 1.5 16.1325 2.00999 16.1325 2.625V3.35248H13.125V2.625C13.125 2.00999 12.6225 1.5 12 1.5C11.3775 1.5 10.875 2.00999 10.875 2.625V3.35248H7.86749V2.625C7.86749 2.00999 7.36501 1.5 6.74249 1.5C6.11998 1.5 5.61749 2.00999 5.61749 2.625V3.35248H4.5C2.22748 3.35248 0.375 5.19749 0.375 7.47748V18.375C0.375 20.6475 2.22748 22.5 4.5 22.5H19.5C21.7725 22.5 23.625 20.6475 23.625 18.375V7.47748C23.625 5.19749 21.7725 3.35248 19.5 3.35248ZM21.375 8.715H2.625V7.47748C2.625 6.44248 3.465 5.60248 4.5 5.60248H5.61749V6.285C5.61749 6.90747 6.11998 7.41 6.74249 7.41C7.36501 7.41 7.86749 6.90747 7.86749 6.285V5.60248H10.875V6.285C10.875 6.90747 11.3775 7.41 12 7.41C12.6225 7.41 13.125 6.90747 13.125 6.285V5.60248H16.1325V6.285C16.1325 6.90747 16.635 7.41 17.2575 7.41C17.88 7.41 18.3825 6.90747 18.3825 6.285V5.60248H19.5C20.535 5.60248 21.375 6.44248 21.375 7.47748V8.715Z" fill="var(--primary)" />
+										</svg>
+
+										<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M15.0005 5.25H6.00049C5.6028 5.25045 5.22154 5.40864 4.94033 5.68984C4.65912 5.97105 4.50094 6.35231 4.50049 6.75V21C4.50049 21.1378 4.53846 21.2729 4.61023 21.3906C4.682 21.5082 4.7848 21.6038 4.90733 21.6669C5.02986 21.7299 5.1674 21.758 5.30485 21.748C5.44229 21.738 5.57433 21.6904 5.68646 21.6103L10.4998 18.1717L15.3146 21.6103C15.4267 21.6904 15.5588 21.7381 15.6962 21.748C15.8336 21.758 15.9712 21.7299 16.0937 21.6669C16.2162 21.6038 16.319 21.5082 16.3908 21.3906C16.4625 21.2729 16.5005 21.1378 16.5005 21V6.75C16.5 6.35231 16.3419 5.97105 16.0606 5.68984C15.7794 5.40864 15.3982 5.25045 15.0005 5.25Z" fill="var(--primary)" />
+											<path d="M18.0005 2.25H8.25049C8.05158 2.25 7.86081 2.32902 7.72016 2.46967C7.57951 2.61032 7.50049 2.80109 7.50049 3C7.50049 3.19891 7.57951 3.38968 7.72016 3.53033C7.86081 3.67098 8.05158 3.75 8.25049 3.75H18.0005V18C18.0005 18.1989 18.0795 18.3897 18.2202 18.5303C18.3608 18.671 18.5516 18.75 18.7505 18.75C18.9494 18.75 19.1402 18.671 19.2808 18.5303C19.4215 18.3897 19.5005 18.1989 19.5005 18V3.75C19.5 3.35231 19.3419 2.97105 19.0606 2.68984C18.7794 2.40864 18.3982 2.25045 18.0005 2.25Z" fill="var(--primary)" />
+										</svg>
+
+										<a data-bs-toggle="modal" data-bs-target="#exampleModal">
+											<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M18.7001 14.1C18.5001 14 18.2001 14 18.0001 14C16.8001 14 15.7001 14.5 14.9001 15.5L9.80011 13.2C10.0001 12.5 10.0001 11.7 9.80011 10.9L14.9001 8.6C16.3001 10.3 18.8001 10.5 20.5001 9.1C22.2001 7.7 22.4001 5.2 21.0001 3.5C19.6001 1.8 17.1001 1.6 15.4001 3C14.5001 3.7 14.0001 4.8 14.0001 6C14.0001 6.2 14.0001 6.5 14.1001 6.7L8.80011 9.1C7.20011 7.6 4.70011 7.6 3.10011 9.2C1.60011 10.8 1.60011 13.3 3.20011 14.9C4.80011 16.4 7.20011 16.4 8.80011 14.9L14.1001 17.3C13.7001 19.5 15.1001 21.6 17.3001 21.9C19.5001 22.3 21.6001 20.9 21.9001 18.7C22.3001 16.5 20.9001 14.5 18.7001 14.1Z" fill="var(--primary)" />
+											</svg>
+										</a>
+
+									</div>
+								</div>
+								<div class="video-img style-1">
+									<div class="view-demo">
+										<img src="~/Finlab/images/course/7.jpg" alt="">
+										<div class="play-button text-center">
+
+											<a href="https://www.youtube.com/watch?v=e6MhFghdQps" class="popup-youtube">
+												<i class="fa fa-play"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="course-details-tab style-2 mt-4">
+									<nav>
+										<div class="nav nav-tabs tab-auto" id="nav-tab" role="tablist">
+											<button class="nav-link active" id="nav-about-tab" data-bs-toggle="tab" data-bs-target="#nav-about" type="button" role="tab" aria-controls="nav-about" aria-selected="true">About</button>
+											<button class="nav-link" id="nav-reviews-tab" data-bs-toggle="tab" data-bs-target="#nav-reviews" type="button" role="tab" aria-controls="nav-reviews" aria-selected="false">Reviews</button>
+											<button class="nav-link " id="nav-discussion-tab" data-bs-toggle="tab" data-bs-target="#nav-discussion" type="button" role="tab" aria-controls="nav-discussion" aria-selected="false">Discussion</button>
+										</div>
+									</nav>
+									<div class="tab-content" id="nav-tabContent">
+										<div class="tab-pane fade show active" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
+											<div class="about-content">
+												<h4>About This Course</h4>
+												<p>
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+												</p>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+											</div>
+										</div>
+										<div class="tab-pane fade " id="nav-reviews" role="tabpanel" aria-labelledby="nav-reviews-tab">
+											<div class="user-pic2">
+												<div class="d-flex align-items-center mb-3">
+													<img src="~/Finlab/images/course/8.jpg" alt="">
+													<div class="ms-3">
+														<h5><a href="javascript:void(0);">Karen Hope</a></h5>
+														<ul class="d-flex align-items-center raiting my-0 flex-wrap">
+															<li>
+																<p class="mb-0">5.0</p><i class="fas fa-star star-orange ms-2"></i>
+																<i class="fas fa-star star-orange"></i>
+																<i class="fas fa-star star-orange"></i>
+																<i class="fas fa-star star-orange"></i>
+																<i class="fas fa-star star-orange"></i>
+															</li>
+															<li>1 Month Ago</li>
+														</ul>
+													</div>
+												</div>
+												<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+											</div>
+											<div class="user-pic2">
+												<div class="d-flex align-items-center">
+													<img src="~/Finlab/images/course/10.jpg" alt="">
+													<div class="ms-3">
+														<h5><a href="javascript:void(0);">Karen Hope</a></h5>
+														<ul class="d-flex align-items-center mb-3 raiting my-0 flex-wrap">
+															<li>
+																<p class="mb-0">5.0</p><i class="fas fa-star star-orange ms-2"></i>
+																<i class="fas fa-star star-orange"></i>
+																<i class="fas fa-star star-orange"></i>
+																<i class="fas fa-star star-orange"></i>
+																<i class="fas fa-star star-orange"></i>
+															</li>
+															<li>1 Month Ago</li>
+														</ul>
+													</div>
+												</div>
+												<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+											</div>
+											<div class="comment">
+												<h3 class="heading my-3">Leave Comment</h3>
+												<div class="row">
+													<div class="col-xl-6 col-sm-6">
+														<div class="mb-3">
+															<label for="exampleFormControlInput1" class="form-label required">Name</label>
+															<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Karen Hope">
+														</div>
+													</div>
+													<div class="col-xl-6 col-sm-6 ">
+														<div class="mb-3">
+															<label for="exampleFormControlInput2" class="form-label required">Email Id</label>
+															<input type="email" class="form-control" id="exampleFormControlInput2" placeholder="hello@example.com">
+														</div>
+													</div>
+													<div class="col-xl-12">
+														<div class="mb-3">
+															<label for="exampleFormControlTextarea3" class="form-label required">Messasge</label>
+															<textarea class="form-control" id="exampleFormControlTextarea3" rows="3">Messasge</textarea>
+														</div>
+													</div>
+													<div>
+														<button class="btn btn-primary" type="submit">Submit A Comment</button>
+													</div>
+
+												</div>
+											</div>
+										</div>
+										<div class="tab-pane fade show" id="nav-discussion" role="tabpanel" aria-labelledby="nav-discussion-tab">
+											<div class="about-content">
+												<h3 class="heading mb-3">Comments</h3>
+												<ul>
+													<li class="mb-3 border-bottom pb-3">
+														<div class="d-flex">
+															<div class="comment-media">
+																<img class="" src="~/Finlab/images/course/12.jpg" alt="">
+															</div>
+															<div class="">
+																<h6 class="mb-1">John Doe</h6>
+																<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+																<a href="javascript:void(0);" class="text-primary"><i class="fa fa-reply me-2"></i>Reply</a>
+															</div>
+														</div>
+													</li>
+
+													<li>
+														<div class="d-flex">
+															<div class="comment-media">
+																<img class="" src="~/Finlab/images/course/8.jpg" alt="">
+															</div>
+															<div class="">
+																<h6 class="mb-1">Harry Doe</h6>
+																<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+																<a href="javascript:void(0);" class="text-primary"><i class="fa fa-reply me-2"></i>Reply</a>
+															</div>
+
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-xxl-4">
+						<div class="card h-auto">
+							<div class="card-header border-0 pb-0">
+								<h2 class="card-title mb-1">Progress</h2>
+
+							</div>
+							<div class="card-body pt-0">
+								<div class="progress-box">
+									<div class="progress h-auto ">
+										<div class="progress-bar bg-primary" style="width:15%; height:6px; border-radius:4px;" role="progressbar"></div>
+									</div>
+
+									<div class="d-flex align-items-center justify-content-between">
+										<p class="mb-0 lh-base">Bitcoin and Cryptocurrencies Technologies</p>
+										<p class="mb-0">10/110</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card h-auto">
+							<div class="card-header d-block border-0">
+								<h4 class="card-title">Most Popular this week</h4>
+								<p class="mb-0">Based on your preferences</p>
+							</div>
+							<div class="card-body pt-0">
+								<div class="popular-bx mb-3">
+									<div class="popular-media">
+										<img src="~/Finlab/images/course/12.jpg" alt="">
+										<div class="video-icon">
+											<i class="fa-solid fa-circle-play text-white"></i>
+										</div>
+									</div>
+									<div class="popular-content">
+										<h5 class="mb-2">Trending Course</h5>
+
+										<p class="mb-0 lh-base">Lorem Ipsum is simply dummy text of the printing and typesetting.</p>
+									</div>
+								</div>
+								<div class="popular-bx mb-3">
+									<div class="popular-media">
+										<img src="~/Finlab/images/course/13.jpg" alt="">
+										<div class="video-icon">
+											<i class="fa-solid fa-circle-play text-white"></i>
+										</div>
+									</div>
+									<div class="popular-content">
+										<h5 class="mb-2">Cryptocurrency Foundation</h5>
+
+										<p class="mb-0 lh-base">Lorem Ipsum is simply dummy text of the printing.</p>
+									</div>
+								</div>
+								<div class="popular-bx">
+									<div class="popular-media">
+										<img src="~/Finlab/images/course/14.jpg" alt="">
+										<div class="video-icon">
+											<i class="fa-solid fa-circle-play text-white"></i>
+										</div>
+									</div>
+									<div class="popular-content">
+										<h5 class="mb-2">Trending Course</h5>
+
+										<p class="mb-0 lh-base">Lorem Ipsum is simply dummy text of the printing and typesetting.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<partial name="Finlab\_ShareModal" />
+@section Finlab_style
+	{
+	<link href="~/Finlab/vendor/wow-master/css/libs/animate.css" rel="stylesheet">
+	<!--swiper-slider-->
+	<link href="~/Finlab/vendor/swiper/css/swiper-bundle.min.css" rel="stylesheet">
+	<link href="~/Finlab/vendor/magnific-popup/magnific-popup.min.css" rel="stylesheet">
+}
+@section Finlab_script
+	{
+	<script src="~/Finlab/vendor/global/global.min.js"></script>
+	<script src="~/Finlab/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+
+	<script src="~/Finlab/vendor/magnific-popup/magnific-popup.js"></script><!-- MAGNIFIC POPUP JS -->
+	<!--swiper-slider-->
+	<script src="~/Finlab/vendor/swiper/js/swiper-bundle.min.js"></script>
+
+	<script src="~/Finlab/vendor/wow-master/dist/wow.min.js"></script>
+
+	<script src="~/Finlab/js/custom.min.js"></script>
+	<script src="~/Finlab/js/dlabnav-init.js"></script>
+	
+	
+
+	<script>
+		$(document).ready(function () {
+			$("#copy").click(function () {
+				$("#data").select();
+				document.execCommand("copy");
+				//alert("Copied On clipboard");
+			});
+		});
+	</script>
+}
