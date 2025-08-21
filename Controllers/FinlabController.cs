@@ -41,38 +41,12 @@ namespace Finlab.Controllers
 		{
 			return View();
 		}
-		public IActionResult ChartChartist()
-		{
-			return View();
-		}
-		public IActionResult ChartChartjs()
-		{
-			return View();
-		}
-		public IActionResult ChartFlot()
-		{
-			return View();
-		}
-		public IActionResult ChartMorris()
-		{
-			return View();
-		}
-		public IActionResult ChartPeity()
-		{
-			return View();
-		}
-		public IActionResult ChartSparkline()
-		{
-			return View();
-		}
+
 		public IActionResult Chat()
 		{
 			return View();
 		}
-		public IActionResult CoinDetails()
-		{
-			return View();
-		}
+
 		public IActionResult Contact()
 		{
 			return View();
@@ -85,18 +59,8 @@ namespace Finlab.Controllers
 		{
 			return View();
 		}
-		public IActionResult CourseDetails()
-		{
-			return View();
-		}
-		public IActionResult CourseListing()
-		{
-			return View();
-		}
-		public IActionResult Crypto()
-		{
-			return View();
-		}
+
+
 		public IActionResult EcomCheckout()
 		{
 			return View();
@@ -193,10 +157,7 @@ namespace Finlab.Controllers
 		{
 			return View();
 		}
-		public IActionResult Market()
-		{
-			return View();
-		}
+
 		public IActionResult Menu()
 		{
 			return View();
