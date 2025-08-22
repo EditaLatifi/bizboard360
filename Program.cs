@@ -1,7 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using Finlab.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Add Entity Framework
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 
@@ -22,7 +29,8 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
 	name: "default",
-	pattern: "{controller=Finlab}/{action=Index}/{id?}");
-	//pattern: "{controller=Home}/{action=Index}/{id?}");
+	pattern: "{controller=Account}/{action=Login}/{id?}");
+	//pattern: "{controller=Finlab}/{action=Index}/{id?}";
+	//pattern: "{controller=Home}/{action=Index}/{id?}";
 
 app.Run();
