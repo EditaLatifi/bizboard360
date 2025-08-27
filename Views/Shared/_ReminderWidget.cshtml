@@ -1,0 +1,186 @@
+@model List<Finlab.Models.InvoiceReminder>
+
+<div class="reminder-widget">
+    <div class="widget-header">
+        <h6 class="widget-title">
+            <i class="fas fa-bell text-warning me-2"></i>
+            Payment Reminders
+        </h6>
+        <span class="badge badge-danger badge-sm" id="reminderCount">0</span>
+    </div>
+    
+    <div class="widget-content">
+        <div id="reminderList">
+            <!-- Reminders will be loaded here -->
+        </div>
+        
+        <div class="text-center mt-3">
+            <a href="/Reminder" class="btn btn-sm btn-outline-primary">
+                <i class="fas fa-eye me-1"></i>View All
+            </a>
+        </div>
+    </div>
+</div>
+
+<style>
+.reminder-widget {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.widget-header {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.widget-title {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.widget-content {
+    padding: 15px;
+}
+
+.reminder-item {
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    border-left: 4px solid #007bff;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.reminder-item:hover {
+    background: #e9ecef;
+    transform: translateX(2px);
+}
+
+.reminder-item.overdue {
+    border-left-color: #dc3545;
+    background: #fff5f5;
+}
+
+.reminder-item.due-today {
+    border-left-color: #ffc107;
+    background: #fffbf0;
+}
+
+.reminder-item.critical {
+    border-left-color: #dc3545;
+    background: #fff5f5;
+    animation: pulse 2s infinite;
+}
+
+@@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(220, 53, 69, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(220, 53, 69, 0); }
+}
+
+.reminder-client {
+    font-weight: 600;
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.reminder-details {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.reminder-amount {
+    font-weight: 600;
+    color: #007bff;
+}
+
+.reminder-date {
+    font-size: 11px;
+    color: #999;
+}
+
+.reminder-priority {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.priority-critical { background: #dc3545; color: white; }
+.priority-high { background: #fd7e14; color: white; }
+.priority-medium { background: #17a2b8; color: white; }
+.priority-low { background: #6c757d; color: white; }
+</style>
+
+<script>
+$(document).ready(function() {
+    loadReminderWidget();
+    
+    // Refresh every 2 minutes
+    setInterval(loadReminderWidget, 120000);
+});
+
+function loadReminderWidget() {
+    $.get('/Reminder/GetReminders', function(data) {
+        const reminderList = $('#reminderList');
+        const reminderCount = $('#reminderCount');
+        
+        // Filter to show only urgent reminders (overdue, due today, critical priority)
+        const urgentReminders = data.filter(r => {
+            const dueDate = new Date(r.dueDate);
+            const today = new Date();
+            const isOverdue = dueDate < today;
+            const isDueToday = dueDate.toDateString() === today.toDateString();
+            return isOverdue || isDueToday || r.priority === 'Critical';
+        }).slice(0, 5); // Show max 5 reminders
+        
+        reminderCount.text(urgentReminders.length);
+        
+        if (urgentReminders.length === 0) {
+            reminderList.html('<div class="text-center text-muted py-3">No urgent reminders</div>');
+            return;
+        }
+        
+        let html = '';
+        urgentReminders.forEach(function(reminder) {
+            const dueDate = new Date(reminder.dueDate);
+            const today = new Date();
+            const isOverdue = dueDate < today;
+            const isDueToday = dueDate.toDateString() === today.toDateString();
+            
+            let itemClass = 'reminder-item';
+            if (isOverdue) itemClass += ' overdue';
+            else if (isDueToday) itemClass += ' due-today';
+            if (reminder.priority === 'Critical') itemClass += ' critical';
+            
+            const priorityClass = `priority-${reminder.priority.toLowerCase()}`;
+            
+            html += `
+                <div class="${itemClass}">
+                    <div class="reminder-client">${reminder.clientName}</div>
+                    <div class="reminder-details">
+                        <span class="reminder-amount">$${reminder.amount.toLocaleString()}</span>
+                        <span class="reminder-priority ${priorityClass} ms-2">${reminder.priority}</span>
+                    </div>
+                    <div class="reminder-date">
+                        ${isOverdue ? 'Overdue' : isDueToday ? 'Due Today' : 'Due: ' + dueDate.toLocaleDateString()}
+                    </div>
+                </div>
+            `;
+        });
+        
+        reminderList.html(html);
+    });
+}
+</script>

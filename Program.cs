@@ -1,10 +1,14 @@
 using Microsoft.EntityFrameworkCore;
 using Finlab.Data;
+using Finlab.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Add Invoice Reminder Service
+builder.Services.AddScoped<IInvoiceReminderService, InvoiceReminderService>();
 
 // Add Entity Framework
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
@@ -29,8 +33,8 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
 	name: "default",
-	pattern: "{controller=Account}/{action=Login}/{id?}");
-	//pattern: "{controller=Finlab}/{action=Index}/{id?}";
+	pattern: "{controller=Finlab}/{action=Index}/{id?}");
+	//pattern: "{controller=Account}/{action=Login}/{id?}";
 	//pattern: "{controller=Home}/{action=Index}/{id?}";
 
 app.Run();

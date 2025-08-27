@@ -835,4 +835,114 @@
 			},
 		});
 	</script>
+
+	<!-- Payment Reminders Script -->
+	<script>
+	$(document).ready(function() {
+		loadInvoiceReminders();
+		
+		// Refresh every 2 minutes
+		setInterval(loadInvoiceReminders, 120000);
+	});
+
+	function loadInvoiceReminders() {
+		$.get('/Reminder/GetReminders', function(data) {
+			// Create reminder section if it doesn't exist
+			if ($('#invoiceReminders').length === 0) {
+				const reminderSection = `
+					<div class="row mt-4">
+						<div class="col-xl-12">
+							<div class="card">
+								<div class="card-header">
+									<h4 class="card-title">
+										<i class="fas fa-bell text-warning me-2"></i>
+										Payment Reminders
+									</h4>
+									<div class="card-toolbar">
+										<a href="/Reminder" class="btn btn-sm btn-primary">
+											<i class="fas fa-eye me-1"></i>Manage Reminders
+										</a>
+									</div>
+								</div>
+								<div class="card-body">
+									<div id="invoiceReminders">
+										<!-- Reminders will be loaded here -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				`;
+				$('.content-body').append(reminderSection);
+			}
+			
+			const reminderContainer = $('#invoiceReminders');
+			
+			// Filter to show only urgent reminders (overdue, due today, critical priority)
+			const urgentReminders = data.filter(r => {
+				const dueDate = new Date(r.dueDate);
+				const today = new Date();
+				const isOverdue = dueDate < today;
+				const isDueToday = dueDate.toDateString() === today.toDateString();
+				return isOverdue || isDueToday || r.priority === 'Critical';
+			}).slice(0, 5); // Show max 5 reminders
+			
+			if (urgentReminders.length === 0) {
+				reminderContainer.html('<div class="text-center text-muted py-4">No urgent payment reminders</div>');
+				return;
+			}
+			
+			let html = '<div class="row">';
+			urgentReminders.forEach(function(reminder) {
+				const dueDate = new Date(reminder.dueDate);
+				const today = new Date();
+				const isOverdue = dueDate < today;
+				const isDueToday = dueDate.toDateString() === today.toDateString();
+				
+				let statusClass = 'badge-light';
+				let statusText = reminder.status;
+				
+				if (isOverdue) {
+					statusClass = 'badge-danger';
+					statusText = 'Overdue';
+				} else if (isDueToday) {
+					statusClass = 'badge-warning';
+					statusText = 'Due Today';
+				}
+				
+				let priorityClass = 'badge-light';
+				switch(reminder.priority) {
+					case 'Critical': priorityClass = 'badge-danger'; break;
+					case 'High': priorityClass = 'badge-warning'; break;
+					case 'Medium': priorityClass = 'badge-info'; break;
+					case 'Low': priorityClass = 'badge-secondary'; break;
+				}
+				
+				html += `
+					<div class="col-md-6 col-lg-4 mb-3">
+						<div class="card border-left-${isOverdue ? 'danger' : isDueToday ? 'warning' : 'primary'} border-left-4">
+							<div class="card-body">
+								<div class="d-flex justify-content-between align-items-start mb-2">
+									<h6 class="card-title mb-0">${reminder.clientName}</h6>
+									<span class="badge ${priorityClass}">${reminder.priority}</span>
+								</div>
+								<p class="card-text text-muted mb-2">${reminder.invoiceNumber}</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<span class="h6 text-primary mb-0">$${reminder.amount.toLocaleString()}</span>
+									<span class="badge ${statusClass}">${statusText}</span>
+								</div>
+								<small class="text-muted">
+									${isOverdue ? 'Overdue' : isDueToday ? 'Due Today' : 'Due: ' + dueDate.toLocaleDateString()}
+								</small>
+							</div>
+						</div>
+					</div>
+				`;
+			});
+			html += '</div>';
+			
+			reminderContainer.html(html);
+		});
+	}
+	</script>
 }
