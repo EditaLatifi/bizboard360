@@ -13,6 +13,7 @@ namespace Finlab.Services
         Task<InvoiceReminder> UpdateReminderAsync(InvoiceReminder reminder);
         Task<bool> MarkAsPaidAsync(int reminderId);
         Task<bool> SendReminderAsync(int reminderId);
+        Task<bool> ConfirmInvoiceAsync(int reminderId);
         Task<List<InvoiceReminder>> GetRemindersByPriorityAsync(ReminderPriority priority);
     }
 }

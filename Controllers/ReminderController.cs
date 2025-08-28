@@ -65,6 +65,20 @@ namespace Finlab.Controllers
         }
         
         [HttpPost]
+        public async Task<IActionResult> ConfirmInvoice(int id)
+        {
+            try
+            {
+                var result = await _reminderService.ConfirmInvoiceAsync(id);
+                return Json(new { success = result });
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = ex.Message });
+            }
+        }
+        
+        [HttpPost]
         public async Task<IActionResult> CreateReminder([FromBody] InvoiceReminder reminder)
         {
             try

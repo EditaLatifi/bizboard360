@@ -269,6 +269,9 @@
                             <button class="btn btn-sm btn-outline-info" onclick="viewDetails(${reminder.id})" title="View Details">
                                 <i class="fas fa-eye"></i>
                             </button>
+                            <button class="btn btn-sm btn-outline-warning" onclick="confirmInvoice(${reminder.id})" title="Confirm Invoice">
+                                <i class="fas fa-thumbs-up"></i>
+                            </button>
                         </div>
                     </td>
                 </tr>
@@ -308,6 +311,19 @@
                         showAlert('Reminder sent successfully!', 'success');
                     } else {
                         showAlert('Failed to send reminder.', 'danger');
+                    }
+                });
+            }
+        }
+        
+        function confirmInvoice(id) {
+            if (confirm('Confirm this invoice?')) {
+                $.post('/Reminder/ConfirmInvoice', { id: id }, function(data) {
+                    if (data.success) {
+                        loadReminders();
+                        showAlert('Invoice confirmed successfully!', 'success');
+                    } else {
+                        showAlert('Failed to confirm invoice.', 'danger');
                     }
                 });
             }

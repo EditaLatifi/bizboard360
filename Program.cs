@@ -24,7 +24,12 @@ if (!app.Environment.IsDevelopment())
 	app.UseHsts();
 }
 
-app.UseHttpsRedirection();
+// Only enable HTTPS redirection if HTTPS is available
+if (app.Configuration["ASPNETCORE_URLS"]?.Contains("https") == true || 
+    app.Configuration["Kestrel:Endpoints:Https"] != null)
+{
+    app.UseHttpsRedirection();
+}
 app.UseStaticFiles();
 
 app.UseRouting();

@@ -146,6 +146,18 @@ namespace Finlab.Services
             return await Task.FromResult(false);
         }
         
+        public async Task<bool> ConfirmInvoiceAsync(int reminderId)
+        {
+            var reminder = _reminders.FirstOrDefault(r => r.Id == reminderId);
+            if (reminder != null)
+            {
+                reminder.Status = ReminderStatus.Acknowledged;
+                reminder.Notes = reminder.Notes + "\n[CONFIRMED] Invoice confirmed on " + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                return await Task.FromResult(true);
+            }
+            return await Task.FromResult(false);
+        }
+        
         public async Task<List<InvoiceReminder>> GetRemindersByPriorityAsync(ReminderPriority priority)
         {
             return await Task.FromResult(_reminders.Where(r => r.IsActive && r.Priority == priority && r.Status != ReminderStatus.Paid).ToList());
