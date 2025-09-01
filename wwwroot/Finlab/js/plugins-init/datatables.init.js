@@ -165,21 +165,54 @@ let dataSet = [
 		  },	
 	}); 
 	
-	// dataTable6
-		var table = $('#example6').DataTable({
-			searching: false,
-			paging:true,
-			select: false,
-			info: false,         
-			lengthChange:false ,
-			language: {
-			paginate: {
-			  next: '<i class="fa-solid fa-angle-right"></i>',
-			  previous: '<i class="fa-solid fa-angle-left"></i>' 
-			}
-		  }
-			
+	// dataTable6 - Moved outside IIFE for better scope handling
+	$(function() {
+		// Wait for DOM to be fully ready
+		$(document).ready(function() {
+			// Add a delay to ensure all content is loaded
+			setTimeout(function() {
+				initializeExample6Table();
+			}, 200);
 		});
+	});
+	
+	function initializeExample6Table() {
+		if ($('#example6').length > 0) {
+			try {
+				// Check if DataTable is already initialized and destroy it
+				if ($.fn.DataTable.isDataTable('#example6')) {
+					$('#example6').DataTable().destroy();
+				}
+				
+				// Clear any existing DataTables classes
+				$('#example6').removeClass('dataTable');
+				
+				var table = $('#example6').DataTable({
+					searching: false,
+					paging: true,
+					select: false,
+					info: false,         
+					lengthChange: false,
+					responsive: true,
+					autoWidth: false,
+					columnDefs: [
+						{ targets: '_all', width: 'auto' }
+					],
+					language: {
+						paginate: {
+						  next: '<i class="fa-solid fa-angle-right"></i>',
+						  previous: '<i class="fa-solid fa-angle-left"></i>' 
+						}
+					},
+					initComplete: function(settings, json) {
+						console.log('DataTable #example6 initialized successfully');
+					}
+				});
+			} catch (error) {
+				console.error('Error initializing DataTable #example6:', error);
+			}
+		}
+	}
 		
 		// dataTable7
 		var table = $('#example7').DataTable({

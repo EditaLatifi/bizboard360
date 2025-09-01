@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Finlab")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4eee9c90b79d8c0dca4ec9c7526576f1c05e83ac")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cbfa6a353db63f62acd60673db287df40e1f2013")]
 [assembly: System.Reflection.AssemblyProductAttribute("Finlab")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Finlab")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -828,6 +828,53 @@
 	<script src="~/Finlab/js/invoice.js"></script>
 	<script src="~/Finlab/js/custom.min.js"></script>
 	
+	<!-- Custom DataTables initialization for Invoice page -->
+	<script>
+		$(document).ready(function() {
+			// Wait a bit longer to ensure everything is loaded
+			setTimeout(function() {
+				initializeInvoiceTable();
+			}, 300);
+		});
+		
+		function initializeInvoiceTable() {
+			if ($('#example6').length > 0) {
+				try {
+					// Check if DataTable is already initialized and destroy it
+					if ($.fn.DataTable.isDataTable('#example6')) {
+						$('#example6').DataTable().destroy();
+					}
+					
+					// Clear any existing DataTables classes and attributes
+					$('#example6').removeClass('dataTable').removeAttr('data-page');
+					
+					var table = $('#example6').DataTable({
+						searching: false,
+						paging: true,
+						select: false,
+						info: false,         
+						lengthChange: false,
+						responsive: true,
+						autoWidth: false,
+						columnDefs: [
+							{ targets: '_all', width: 'auto' }
+						],
+						language: {
+							paginate: {
+							  next: '<i class="fa-solid fa-angle-right"></i>',
+							  previous: '<i class="fa-solid fa-angle-left"></i>' 
+							}
+						},
+						initComplete: function(settings, json) {
+							console.log('DataTable #example6 initialized successfully');
+						}
+					});
+				} catch (error) {
+					console.error('Error initializing DataTable #example6:', error);
+				}
+			}
+		}
+	</script>
 	
 	<script>
 		var swiper = new Swiper("#card-swiper", {

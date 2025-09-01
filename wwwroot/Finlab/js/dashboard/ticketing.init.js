@@ -1,13 +1,2 @@
-var table = $('#example6').DataTable({
-    searching: false,
-    paging:true,
-    select: false,
-    info: true,         
-    lengthChange:false ,
-    language: {
-        paginate: {
-          next: '<span></span><i class="fas fa-chevron-right"></i>',
-          previous: '<i class="fas fa-chevron-left"></i><span></span>' 
-        }
-      },	
-}); 
+// This file is no longer needed as #example6 is initialized in datatables.init.js
+// Removing duplicate initialization to prevent DataTables conflicts 

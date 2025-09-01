@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Blend\\Desktop\\bizboard360\\Finlab.csproj": {}
+    "C:\\Users\\blend\\BizBoard360\\bizboard360\\Finlab.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Blend\\Desktop\\bizboard360\\Finlab.csproj": {
+    "C:\\Users\\blend\\BizBoard360\\bizboard360\\Finlab.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Blend\\Desktop\\bizboard360\\Finlab.csproj",
+        "projectUniqueName": "C:\\Users\\blend\\BizBoard360\\bizboard360\\Finlab.csproj",
         "projectName": "Finlab",
-        "projectPath": "C:\\Users\\Blend\\Desktop\\bizboard360\\Finlab.csproj",
-        "packagesPath": "C:\\Users\\Blend\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Blend\\Desktop\\bizboard360\\obj\\",
+        "projectPath": "C:\\Users\\blend\\BizBoard360\\bizboard360\\Finlab.csproj",
+        "packagesPath": "C:\\Users\\blend\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\blend\\BizBoard360\\bizboard360\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Blend\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\blend\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -37,12 +37,31 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[9.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.8, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -54,24 +73,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.18, 8.0.18]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[8.0.18, 8.0.18]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.18, 8.0.18]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.18, 8.0.18]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -80,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.413/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

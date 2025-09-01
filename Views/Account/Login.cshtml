@@ -9,7 +9,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@ViewData["Title"] - FinLab Admin</title>
+    <title>@ViewData["Title"] - BizBoard360 Admin</title>
     
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="~/favicon.ico">
@@ -132,7 +132,6 @@
                                         <p class="text-muted">Sign in to your account</p>
                                     </div>
                                     
-                                    @* Temporarily commented out login form for development access
                                     @if (TempData["SuccessMessage"] != null)
                                     {
                                         <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -182,7 +181,7 @@
                                                     <i class="fas fa-eye"></i>
                                                 </button>
                                             </div>
-                                            <span asp-validation-for="UsernameOrEmail" class="text-danger"></span>
+                                            <span asp-validation-for="Password" class="text-danger"></span>
                                         </div>
                                         
                                         <div class="form-group d-flex justify-content-between align-items-center">
@@ -212,21 +211,6 @@
                                             <a href="#" class="text-primary">Terms of Service</a> and 
                                             <a href="#" class="text-primary">Privacy Policy</a>
                                         </small>
-                                    </div>
-                                    *@
-                                    
-                                    <!-- Login form temporarily disabled for development access -->
-                                    <div class="text-center">
-                                        <div class="alert alert-success" role="alert">
-                                            <i class="fas fa-check-circle me-2"></i>
-                                            <strong>Access Granted!</strong><br>
-                                            <small class="text-muted">Login bypassed for development. You have full access to the system.</small>
-                                        </div>
-                                        <div class="mt-4">
-                                            <a href="/Finlab/Index" class="btn btn-primary btn-lg">
-                                                <i class="fas fa-rocket me-2"></i>Go to Dashboard
-                                            </a>
-                                        </div>
                                     </div>
                                 </div>
                             </div>

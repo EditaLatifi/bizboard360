@@ -43,7 +43,7 @@ namespace Finlab.Controllers
                     {
                         Username = "admin",
                         Email = "info@bizboard.eu",
-                        PasswordHash = HashPassword("Admin1"),
+                        PasswordHash = HashPassword("Admin5"),
                         CreatedAt = DateTime.UtcNow,
                         IsActive = true
                     };
